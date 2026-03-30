@@ -286,9 +286,9 @@ if __name__ == "__main__":
 
 ## 卡住时先回看这里
 
-- 如果你混淆了 LangChain 和模型提供商，回看 [chapter-02-langchain-core.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-02-langchain-core.md) 里的 `## 2.1 LangChain 在工程中的位置`
-- 如果你不清楚模板和解析器为什么要分开，回看 [chapter-02-langchain-core.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-02-langchain-core.md) 里的 `## 2.2 PromptTemplate` 到 `## 2.4 Output Parser`
-- 如果你不知道这些抽象最终要服务什么项目形态，回看 [chapter-02-langchain-core.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-02-langchain-core.md) 里的 `## 2.7 AI 学习助手 的结构化第一版`
+- 如果你混淆了 LangChain 和模型提供商，回看 [chapter-02-langchain-core.md](/chapters/chapter-02-langchain-core) 里的 `## 2.1 LangChain 在工程中的位置`
+- 如果你不清楚模板和解析器为什么要分开，回看 [chapter-02-langchain-core.md](/chapters/chapter-02-langchain-core) 里的 `## 2.2 PromptTemplate` 到 `## 2.4 Output Parser`
+- 如果你不知道这些抽象最终要服务什么项目形态，回看 [chapter-02-langchain-core.md](/chapters/chapter-02-langchain-core) 里的 `## 2.7 AI 学习助手 的结构化第一版`
 
 ## 下一章预告
 

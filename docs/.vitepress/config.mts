@@ -15,6 +15,7 @@ export default defineConfig({
     nav: [
       { text: "首页", link: "/" },
       { text: "快速开始", link: "/guide/getting-started" },
+      { text: "学习计划", link: "/guide/study-plan" },
       { text: "路线图", link: "/guide/roadmap" },
       { text: "术语表", link: "/faq/glossary" },
       { text: "章节", link: "/chapters/" },
@@ -29,6 +30,7 @@ export default defineConfig({
           items: [
             { text: "新手 Setup", link: "/guide/setup" },
             { text: "快速开始", link: "/guide/getting-started" },
+            { text: "学习计划", link: "/guide/study-plan" },
             { text: "学习路线图", link: "/guide/roadmap" }
           ]
         }

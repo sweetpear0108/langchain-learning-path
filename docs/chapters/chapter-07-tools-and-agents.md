@@ -210,9 +210,9 @@ result = agent.invoke({
 
 ## 卡住时先回看这里
 
-- 如果你总想直接上 Agent，回看 [chapter-07-tools-and-agents.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-07-tools-and-agents.md) 里的 `## 核心概念`
-- 如果你不会拆工具边界，回看 [chapter-07-tools-and-agents.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-07-tools-and-agents.md) 里的 `## 本章实践`
-- 如果你看不懂最小示例到底表达了什么，回看 [chapter-07-tools-and-agents.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-07-tools-and-agents.md) 里的 `## 最小示例说明`
+- 如果你总想直接上 Agent，回看 [chapter-07-tools-and-agents.md](/chapters/chapter-07-tools-and-agents) 里的 `## 核心概念`
+- 如果你不会拆工具边界，回看 [chapter-07-tools-and-agents.md](/chapters/chapter-07-tools-and-agents) 里的 `## 本章实践`
+- 如果你看不懂最小示例到底表达了什么，回看 [chapter-07-tools-and-agents.md](/chapters/chapter-07-tools-and-agents) 里的 `## 最小示例说明`
 
 ## 下一章预告
 
