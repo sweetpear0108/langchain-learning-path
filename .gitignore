@@ -16,6 +16,13 @@ venv/
 .env.*
 !.env.example
 
+# Codex runtime artifacts
+.codex/
+AGENT.md
+scripts/codex-json.js
+scripts/codex-run-next-todo.sh
+scripts/codex-run-todo-queue.sh
+
 # OS / editor
 .DS_Store
 .idea/
