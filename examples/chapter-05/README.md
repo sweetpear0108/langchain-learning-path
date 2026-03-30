@@ -32,6 +32,8 @@ pip install -r requirements.txt
 python3 main.py
 ```
 
+示例会从 `../../shared/datasets/chapter-05/course_materials.json` 读取课程资料。
+
 ## 预期输出
 
 脚本会打印：
@@ -51,3 +53,11 @@ python3 main.py
 5. 生成回答
 
 这是 `AI 学习助手` 从“会聊天”升级为“会基于课程资料回答问题”的第一步。
+
+## 为什么把数据拆出去
+
+把知识内容放到 `shared/datasets`、把检索逻辑留在脚本里，更接近真实 RAG 项目里的“知识与逻辑分离”做法：
+
+- 改练习数据时，不需要同时改检索代码
+- 后续可以把同一套流程替换成别的课程资料或业务文档
+- 更容易观察问题到底出在数据、切分还是检索逻辑

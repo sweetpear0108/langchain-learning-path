@@ -1,0 +1,18 @@
+[
+  {
+    "source": "chapter-01",
+    "page_content": "第 1 章讲 LLM 应用基础，重点是理解 prompt、message、context、token。它帮助学习者建立正确的应用视角，而不是直接追求复杂功能。"
+  },
+  {
+    "source": "chapter-03",
+    "page_content": "第 3 章讲第一个链式应用，核心是把 Prompt、Model 和 Parser 串成一条可维护的数据流。这为后续 RAG、Agent 和 LangGraph 预留结构。"
+  },
+  {
+    "source": "chapter-05",
+    "page_content": "第 5 章讲基础 RAG。RAG 的关键不是让模型记住更多，而是先检索课程资料，再让模型根据资料生成回答。流程通常包括文档加载、切分、检索和生成。"
+  },
+  {
+    "source": "chapter-06",
+    "page_content": "第 6 章讲 RAG 优化。优化重点包括切分策略、检索质量、上下文组织和生成约束。目标是让回答更稳、更准、更少编造。"
+  }
+]

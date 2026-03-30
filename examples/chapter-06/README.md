@@ -32,6 +32,8 @@ pip install -r requirements.txt
 python3 main.py
 ```
 
+示例会从 `../../shared/datasets/chapter-06/course_materials.json` 读取课程资料。
+
 ## 预期输出
 
 脚本会对比两种 RAG 策略：
@@ -51,3 +53,11 @@ python3 main.py
 4. 生成约束
 
 这是 `AI 学习助手` 走向可控、可调试 RAG 的关键一步。
+
+## 为什么把数据拆出去
+
+把课程资料放到 `shared/datasets`，可以把“要检索什么”与“如何检索”分开处理：
+
+- 调整教学语料时，不会把优化实验逻辑一起改乱
+- 后续更容易替换成新的资料集，复用同一套实验脚本
+- 更接近真实工程里单独维护知识库、索引和应用逻辑的结构

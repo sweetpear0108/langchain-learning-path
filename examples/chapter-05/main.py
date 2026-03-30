@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import json
+from pathlib import Path
 import re
 from typing import Iterable
 
@@ -14,36 +16,15 @@ class RetrievedChunk:
     score: int
 
 
-COURSE_MATERIALS = [
-    Document(
-        page_content=(
-            "第 1 章讲 LLM 应用基础，重点是理解 prompt、message、context、token。"
-            "它帮助学习者建立正确的应用视角，而不是直接追求复杂功能。"
-        ),
-        metadata={"source": "chapter-01"},
-    ),
-    Document(
-        page_content=(
-            "第 3 章讲第一个链式应用，核心是把 Prompt、Model 和 Parser 串成一条可维护的数据流。"
-            "这为后续 RAG、Agent 和 LangGraph 预留结构。"
-        ),
-        metadata={"source": "chapter-03"},
-    ),
-    Document(
-        page_content=(
-            "第 5 章讲基础 RAG。RAG 的关键不是让模型记住更多，而是先检索课程资料，再让模型根据资料生成回答。"
-            "流程通常包括文档加载、切分、检索和生成。"
-        ),
-        metadata={"source": "chapter-05"},
-    ),
-    Document(
-        page_content=(
-            "第 6 章讲 RAG 优化。优化重点包括切分策略、检索质量、上下文组织和生成约束。"
-            "目标是让回答更稳、更准、更少编造。"
-        ),
-        metadata={"source": "chapter-06"},
-    ),
-]
+DATASET_PATH = Path(__file__).resolve().parents[2] / "shared" / "datasets" / "chapter-05" / "course_materials.json"
+
+
+def load_course_materials(dataset_path: Path = DATASET_PATH) -> list[Document]:
+    payload = json.loads(dataset_path.read_text(encoding="utf-8"))
+    return [
+        Document(page_content=item["page_content"], metadata={"source": item["source"]})
+        for item in payload
+    ]
 
 
 def build_chunks(documents: Iterable[Document]) -> list[Document]:
@@ -98,8 +79,10 @@ def synthesize_answer(question: str, retrieved: list[RetrievedChunk]) -> str:
 
 
 def main() -> None:
-    chunks = build_chunks(COURSE_MATERIALS)
-    print(f"Loaded documents: {len(COURSE_MATERIALS)}")
+    course_materials = load_course_materials()
+    chunks = build_chunks(course_materials)
+    print(f"Dataset: {DATASET_PATH.relative_to(Path(__file__).resolve().parents[2])}")
+    print(f"Loaded documents: {len(course_materials)}")
     print(f"Split chunks: {len(chunks)}")
     print()
 

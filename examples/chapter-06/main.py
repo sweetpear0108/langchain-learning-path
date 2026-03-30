@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import json
+from pathlib import Path
 import re
 from typing import Iterable
 
@@ -14,29 +16,15 @@ class RetrievedChunk:
     score: int
 
 
-COURSE_MATERIALS = [
-    Document(
-        page_content=(
-            "第 5 章讲基础 RAG。关键步骤包括加载课程资料、切分文档、检索相关片段和生成答案。"
-            "如果资料不足，就应该明确说明。"
-        ),
-        metadata={"source": "chapter-05"},
-    ),
-    Document(
-        page_content=(
-            "第 6 章讲 RAG 进阶优化。重点是根据资料类型调整切分策略，提升 Retriever 的命中质量，"
-            "并控制上下文长度，减少模型编造。"
-        ),
-        metadata={"source": "chapter-06"},
-    ),
-    Document(
-        page_content=(
-            "优化 RAG 时，不能只调模型。切分、检索、上下文拼装和生成提示词都可能影响结果。"
-            "调试时应保存每一步的中间结果。"
-        ),
-        metadata={"source": "chapter-06-notes"},
-    ),
-]
+DATASET_PATH = Path(__file__).resolve().parents[2] / "shared" / "datasets" / "chapter-06" / "course_materials.json"
+
+
+def load_course_materials(dataset_path: Path = DATASET_PATH) -> list[Document]:
+    payload = json.loads(dataset_path.read_text(encoding="utf-8"))
+    return [
+        Document(page_content=item["page_content"], metadata={"source": item["source"]})
+        for item in payload
+    ]
 
 
 def split_documents(documents: Iterable[Document], chunk_size: int, chunk_overlap: int) -> list[Document]:
@@ -82,13 +70,16 @@ def answer(question: str, context: str, mode: str) -> str:
 
 
 def run_experiment(question: str, chunk_size: int, chunk_overlap: int, top_k: int, mode: str) -> None:
-    chunks = split_documents(COURSE_MATERIALS, chunk_size=chunk_size, chunk_overlap=chunk_overlap)
+    course_materials = load_course_materials()
+    chunks = split_documents(course_materials, chunk_size=chunk_size, chunk_overlap=chunk_overlap)
     retrieved = retrieve(question, chunks, top_k=top_k)
     context = compress_context(retrieved)
 
     print("=" * 80)
     print(f"Mode: {mode}")
+    print(f"Dataset: {DATASET_PATH.relative_to(Path(__file__).resolve().parents[2])}")
     print(f"Chunk size: {chunk_size}, overlap: {chunk_overlap}, top_k: {top_k}")
+    print(f"Loaded documents: {len(course_materials)}")
     print(f"Chunks: {len(chunks)}")
     print("Retrieved:")
     for item in retrieved:
