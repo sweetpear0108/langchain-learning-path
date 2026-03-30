@@ -15,6 +15,12 @@
 - 依赖：`examples/chapter-05/requirements.txt`
 - 运行：`cd examples/chapter-05 && python3 main.py`
 
+## 示例层级与边界
+
+- 层级：`教学版`
+- 本章重点：把基础 RAG 流程拆开，先看懂文档切分、检索和回答是怎么串起来的。
+- 不要误判：这里强调流程理解，不代表真实 Embedding 服务、向量库选型或线上索引维护方案。
+
 ## 本章目标
 
 学完这一章，你应该能理解：

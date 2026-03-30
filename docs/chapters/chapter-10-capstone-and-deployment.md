@@ -13,6 +13,12 @@
 - 依赖：`examples/chapter-10/requirements.txt`
 - 运行：`cd examples/chapter-10 && python3 main.py`
 
+## 示例层级与边界
+
+- 层级：`更真实的工程版`
+- 本章重点：从交付和部署准备度角度看整个项目是否站得住，而不是再讲一个新的 LangChain API。
+- 不要误判：示例只是帮助你检查公开发布前的基本结构，不会替代真实部署流水线、CI/CD 和运行时监控。
+
 ## 本章目标
 
 学完这一章，你应该能：

@@ -13,6 +13,12 @@
 - 依赖：`examples/chapter-03/requirements.txt`
 - 运行：`cd examples/chapter-03 && python3 main.py`
 
+## 示例层级与边界
+
+- 层级：`教学版`
+- 本章重点：理解链式应用的结构拆分，先把输入、Prompt、模型和解析关系讲清楚。
+- 不要误判：这里保留了真实 LangChain 组织方式，但模型调用仍是本地模拟，不是完整生产实现。
+
 ## 本章目标
 
 - 理解什么是“链式应用”

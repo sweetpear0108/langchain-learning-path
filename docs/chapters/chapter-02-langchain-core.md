@@ -13,6 +13,12 @@
 - 依赖：`examples/chapter-02/requirements.txt`
 - 运行：`cd examples/chapter-02 && python3 main.py`
 
+## 示例层级与边界
+
+- 层级：`Toy`
+- 本章重点：理解 LangChain 核心抽象为什么值得拆分，而不是学习某个真实模型供应商的完整接法。
+- 不要误判：示例只保留最小 LCEL 思维模型，不覆盖真实回调、配置管理或复杂链路。
+
 ## 本章目标
 
 学完这一章，你应该能够：

@@ -13,6 +13,12 @@
 - 依赖：`examples/chapter-01/requirements.txt`
 - 运行：`cd examples/chapter-01 && python3 main.py`
 
+## 示例层级与边界
+
+- 层级：`Toy`
+- 本章重点：先建立 LLM 应用的基本心智模型，理解流程比接真实 API 更重要。
+- 不要误判：这里的 `ToyLLM` 只是占位层，不能代表真实模型接入、成本控制或线上可用性。
+
 ## 本章目标
 学完这一章，你应该能够：
 

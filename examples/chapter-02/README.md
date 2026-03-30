@@ -9,6 +9,12 @@
 - `StructuredParser` 负责把文本转成结构化结果
 - `chain = prompt | model | parser` 负责把三者串起来
 
+## 示例层级
+
+- 层级：`Toy`
+- 重点：理解 LangChain 核心抽象为什么要拆成模板、模型和解析器。
+- 边界：示例只模拟 LCEL 组合思路，不追求覆盖真实 LangChain API 的全部能力，也不代表生产链路配置。
+
 ## 章节目标
 
 - 理解 LangChain 最核心的三类角色
