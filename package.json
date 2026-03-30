@@ -4,6 +4,9 @@
   "private": true,
   "description": "A chapter-based LangChain learning site built with VitePress.",
   "scripts": {
+    "ci:docs": "npm run docs:build",
+    "ci:examples": "python3 scripts/smoke_examples.py",
+    "ci:check": "npm run ci:docs && npm run ci:examples",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"

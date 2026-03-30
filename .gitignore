@@ -22,6 +22,7 @@ AGENT.md
 scripts/codex-json.js
 scripts/codex-run-next-todo.sh
 scripts/codex-run-todo-queue.sh
+!scripts/smoke_examples.py
 
 # OS / editor
 .DS_Store
