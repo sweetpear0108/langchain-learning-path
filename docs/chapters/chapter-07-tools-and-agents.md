@@ -188,6 +188,32 @@ result = agent.invoke({
 
 但也要记住，Agent 不是默认最优解。只要任务流程可以稳定写死，就优先用链；只有当任务确实需要动态决策时，再引入 Agent。
 
+## 学完本章，你现在应该会
+
+- 区分 Tool 和 Agent 的职责边界
+- 判断一个学习场景适合固定链还是适合 Agent 动态决策
+- 为 `AI 学习助手 V3` 设计出边界清晰的几个工具
+- 从最终回答反推出 Agent 是否真的调用了工具
+
+## 最小验收 checklist
+
+- [ ] 我至少设计了 2 到 3 个输入输出明确的 Tool
+- [ ] 我能解释为什么不能把所有能力都塞进一个大 Tool
+- [ ] 我能说出 Agent 在这个章节里到底帮我省掉了什么固定流程
+- [ ] 我知道排查 Agent 问题时要看工具调用过程，不只看最后答案
+
+## 建议你动手改一版
+
+- 先只实现 `search_outline` 和 `get_chapter_summary` 两个 Tool，再决定是否值得加第三个 Tool
+- 给某个 Tool 补一个错误返回格式，练习让 Agent 优雅处理失败
+- 把一个原本可以固定执行的任务强行交给 Agent，再比较它和链的稳定性差异
+
+## 卡住时先回看这里
+
+- 如果你总想直接上 Agent，回看 [chapter-07-tools-and-agents.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-07-tools-and-agents.md) 里的 `## 核心概念`
+- 如果你不会拆工具边界，回看 [chapter-07-tools-and-agents.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-07-tools-and-agents.md) 里的 `## 本章实践`
+- 如果你看不懂最小示例到底表达了什么，回看 [chapter-07-tools-and-agents.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-07-tools-and-agents.md) 里的 `## 最小示例说明`
+
 ## 下一章预告
 
 下一章我们会把这种“模型动态决策 + 多工具调用”的思路进一步工程化，进入 `LangGraph`。那一章会解决一个更现实的问题：当流程开始出现分支、循环、重试和人工介入时，怎样把整个系统组织得可控、可调试。

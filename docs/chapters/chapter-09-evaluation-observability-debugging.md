@@ -284,6 +284,32 @@ LLM 应用需要多次运行观察波动，尤其是开放式问答。
 
 对于 `AI 学习助手` 来说，这意味着你不再只是“做出一个回答器”，而是在做一个可以长期迭代的学习产品。只要这一点成立，后面的部署、扩展、公开传播才有基础。
 
+## 学完本章，你现在应该会
+
+- 为 `AI 学习助手` 设计一组覆盖基础层、实战层和边界层的小型评估集
+- 说明 trace、日志、评分规则分别解决什么问题
+- 判断一个回答问题该从评估数据、中间链路还是版本变更去排查
+- 把“感觉不错”转换成可记录、可比较的指标
+
+## 最小验收 checklist
+
+- [ ] 我已经列出一组最小评估问题，而不是只靠临时提问
+- [ ] 我知道每次运行至少要记录哪些关键信息
+- [ ] 我能举出 1 到 3 个真实失败案例，而不是只展示成功结果
+- [ ] 我会在 Prompt、检索或模型变化时记录版本背景
+
+## 建议你动手改一版
+
+- 先写 10 个评估问题并分组，后面每改一次链路都跑同一组问题
+- 给日志增加一个最小字段集，例如问题、检索结果、最终答案、耗时
+- 选一个历史输出，补写一段失败分析，训练自己从链路而不是从感觉定位问题
+
+## 卡住时先回看这里
+
+- 如果你还在凭直觉判断效果，回看 [chapter-09-evaluation-observability-debugging.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-09-evaluation-observability-debugging.md) 里的 `## 核心概念`
+- 如果你不知道最小评估该从哪里起步，回看 [chapter-09-evaluation-observability-debugging.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-09-evaluation-observability-debugging.md) 里的 `## 本章实践`
+- 如果你只盯着最终回答不看中间过程，回看 [chapter-09-evaluation-observability-debugging.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-09-evaluation-observability-debugging.md) 里的 `## 常见坑`
+
 ## 下一步
 
 如果你要继续完善这个项目，下一步就是把前九章的成果整合成一个完整可访问的公开版本。第 10 章会把文档站、示例代码和部署流程连起来，形成最终的交付闭环。

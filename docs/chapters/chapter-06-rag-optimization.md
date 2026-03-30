@@ -302,6 +302,32 @@ RAG 调试应该看链路，不该只看最终答案。
 
 把这四层理顺，你的 RAG 系统才算进入可用状态。
 
+## 学完本章，你现在应该会
+
+- 把一个 RAG 问题拆到切分、检索、上下文、生成四层里定位
+- 说明为什么“答偏”不一定是模型能力问题
+- 设计一次小规模、可重复的 RAG 优化实验
+- 为 `AI 学习助手` 写出更严格的资料边界和回答约束
+
+## 最小验收 checklist
+
+- [ ] 我至少记录过一次基础 RAG 的问题案例和中间过程
+- [ ] 我能说出本次优化到底改的是哪一层，而不是“整体感觉更好”
+- [ ] 我知道什么时候该减少上下文，而不是继续增加片段数量
+- [ ] 我能解释为什么优化要一次只改一个变量
+
+## 建议你动手改一版
+
+- 选 5 到 10 个问题做一个小评测表，对比优化前后的命中率或完整性
+- 给回答模板补上“先结论、再依据、最后说明资料边界”的结构
+- 试着只改 `top-k` 或切分粒度中的一个参数，记录它对结果的影响
+
+## 卡住时先回看这里
+
+- 如果你不知道该从哪里排查，回看 [chapter-06-rag-optimization.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-06-rag-optimization.md) 里的 `## 优化的四个方向`
+- 如果你想直接调模型却说不清问题来源，回看 [chapter-06-rag-optimization.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-06-rag-optimization.md) 里的 `## 本章实践`
+- 如果你对“只根据资料作答”的约束写不出来，回看 [chapter-06-rag-optimization.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-06-rag-optimization.md) 里的 `## 生成优化怎么做`
+
 ## 下一章预告
 
 下一章会从“知识问答”转向“动作执行”。

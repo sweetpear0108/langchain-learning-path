@@ -264,6 +264,32 @@ if __name__ == "__main__":
 
 下一章我们会基于这些基础，正式构建 `AI 学习助手 V1`，把零散组件真正串成一个最小链式应用。
 
+## 学完本章，你现在应该会
+
+- 解释 `PromptTemplate`、`Chat Model`、`Output Parser` 各自负责什么
+- 说清 `Runnable` 和 `LCEL` 为什么让链路更容易组合
+- 把一个自然语言需求拆成输入模板、模型执行和输出解析三个步骤
+- 说明为什么结构化输出对 `AI 学习助手` 后续章节很关键
+
+## 最小验收 checklist
+
+- [ ] 我能写出一个最小的 `prompt | model | parser` 结构
+- [ ] 我能解释模板化输入相比直接拼字符串的工程价值
+- [ ] 我能设计一个简单的结构化输出字段集合
+- [ ] 我知道 Parser 的职责不是“美化文本”，而是让结果可继续处理
+
+## 建议你动手改一版
+
+- 把本章示例的输出改成固定字段，例如 `summary`、`difficulty`、`steps`
+- 给 `AI 学习助手 V1` 增加一个“学习时长建议”字段，看看 Prompt 和 Parser 要怎么一起调整
+- 尝试把输出改成 Markdown 列表，再比较它和 JSON 各自适合什么场景
+
+## 卡住时先回看这里
+
+- 如果你混淆了 LangChain 和模型提供商，回看 [chapter-02-langchain-core.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-02-langchain-core.md) 里的 `## 2.1 LangChain 在工程中的位置`
+- 如果你不清楚模板和解析器为什么要分开，回看 [chapter-02-langchain-core.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-02-langchain-core.md) 里的 `## 2.2 PromptTemplate` 到 `## 2.4 Output Parser`
+- 如果你不知道这些抽象最终要服务什么项目形态，回看 [chapter-02-langchain-core.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-02-langchain-core.md) 里的 `## 2.7 AI 学习助手 的结构化第一版`
+
 ## 下一章预告
 
 下一章会把本章的抽象组合起来，完成第一个可运行的链式应用，并开始处理“输入主题、生成学习建议、输出结构化结果”这类更接近真实项目的任务。

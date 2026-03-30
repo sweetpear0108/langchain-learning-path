@@ -215,6 +215,32 @@ LangGraph 的核心价值不是“让模型更聪明”，而是“让复杂 AI 
 
 如果说前面的章节是在训练“怎么让模型做事”，这一章就是在训练“怎么让一个 AI 系统稳定地做完整件事”。
 
+## 学完本章，你现在应该会
+
+- 解释为什么复杂 AI 系统需要状态、节点和显式转移
+- 为 `AI 学习助手 V4` 设计一个最小状态结构
+- 判断哪些步骤应该拆成节点，哪些仍然适合留在单个节点内部
+- 给失败路径设计一个可理解的兜底输出
+
+## 最小验收 checklist
+
+- [ ] 我能画出一条包含分类、检索或工具、总结的最小工作流
+- [ ] 我定义的状态字段不多，但足够支撑路由和调试
+- [ ] 我能解释至少一个条件分支为什么存在
+- [ ] 我已经考虑某个节点失败时，系统如何继续给用户反馈
+
+## 建议你动手改一版
+
+- 先只做 3 个节点版本：分类、执行、总结，避免一开始把图做太大
+- 给状态增加一个 `trace` 或 `steps` 字段，用来记录走过哪些节点
+- 故意制造一个节点失败场景，看看你的兜底路径是否还能返回可理解说明
+
+## 卡住时先回看这里
+
+- 如果你把所有逻辑都塞到一个节点里，回看 [chapter-08-langgraph-workflows.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-08-langgraph-workflows.md) 里的 `## 分模块讲解`
+- 如果你不知道状态最少该放什么，回看 [chapter-08-langgraph-workflows.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-08-langgraph-workflows.md) 里的 `## 本章实践`
+- 如果你分不清“图结构”和“普通链”的边界，回看 [chapter-08-langgraph-workflows.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-08-langgraph-workflows.md) 里的 `## 最小示例说明`
+
 ## 下一章预告
 
 下一章会进入工程化收尾，讨论评估、观测和调试。因为一旦系统变成链、Agent 和图的组合，最难的就不是“能不能跑”，而是“怎么知道哪里出了问题、怎么判断效果是否真的变好”。

@@ -272,6 +272,32 @@ prompt = PromptTemplate.from_template(template)
 - 让输出更适合程序处理和页面展示
 - 把 `AI 学习助手` 的结构稳定下来，为后续章节继续演进
 
+## 学完本章，你现在应该会
+
+- 把一个模糊需求改写成包含任务、约束和输出格式的 Prompt
+- 判断什么场景需要角色设定，什么场景只需要明确任务描述
+- 让 `AI 学习助手 V2` 的输出更稳定、更适合页面展示
+- 用多次运行对比 Prompt 调整前后的输出差异
+
+## 最小验收 checklist
+
+- [ ] 我写出了一个固定输出 4 个部分的 Prompt
+- [ ] 我能指出 Prompt 里的身份、任务、约束、格式分别在哪
+- [ ] 我至少比较过一次“改 Prompt 前”和“改 Prompt 后”的输出区别
+- [ ] 我知道本章目标不是写华丽提示词，而是提高结果可控性
+
+## 建议你动手改一版
+
+- 给 `AI 学习助手 V2` 增加一个“不知道就明确说明”的约束
+- 为“RAG 入门”和“Prompt 工程”两个主题分别调 Prompt，比较哪部分需要通用、哪部分需要定制
+- 把输出格式固定为 Markdown 小节标题，测试是否更容易直接进入文档页面
+
+## 卡住时先回看这里
+
+- 如果你写的 Prompt 总是一大段散文，回看 [chapter-04-prompt-engineering.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-04-prompt-engineering.md) 里的 `## 核心概念`
+- 如果你不确定实践目标到底是什么，回看 [chapter-04-prompt-engineering.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-04-prompt-engineering.md) 里的 `## 本章实践`
+- 如果你只顾自然语言流畅没有考虑结构化输出，回看 [chapter-04-prompt-engineering.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-04-prompt-engineering.md) 里的 `## 最小示例说明`
+
 ## 下一章预告
 
 下一章我们会进入 RAG 入门。到那时，Prompt 不再只是决定风格和结构，它还会和检索到的课程资料结合，决定模型究竟“看到了什么”和“如何回答”。这会让 `AI 学习助手` 从生成内容，进一步走向基于资料的学习支持系统。

@@ -302,6 +302,32 @@ RAG 不是记忆增强，而是检索增强。
 
 在 `AI 学习助手` 中，这一章让系统第一次具备了“基于项目资料回答问题”的能力。
 
+## 学完本章，你现在应该会
+
+- 用自己的话讲清楚 RAG 的基本流程：准备资料、检索片段、基于片段生成回答
+- 解释切分、Embedding、Retriever 在链路里的职责差异
+- 判断一个问题是“模型没答好”还是“检索没找对”
+- 给 `AI 学习助手` 加上“只根据课程资料回答”的基础约束
+
+## 最小验收 checklist
+
+- [ ] 我能画出一个最小 RAG 链路并说清每一步输入输出
+- [ ] 我已经用 3 到 5 篇资料做过一次最小检索问答实验
+- [ ] 我会检查检索相关性，而不是只盯着最终回答
+- [ ] 我能解释为什么课程站比纯模型问答更适合 RAG
+
+## 建议你动手改一版
+
+- 把知识源从 3 篇扩到 5 篇，再观察检索是否开始混入无关内容
+- 分别试一次“按自然段切分”和“按固定长度切分”，比较哪种更适合课程资料
+- 在回答里新增“依据片段”部分，训练自己观察模型是否真的基于资料作答
+
+## 卡住时先回看这里
+
+- 如果你还在把 RAG 理解成“扩大模型记忆”，回看 [chapter-05-rag-basics.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-05-rag-basics.md) 里的 `## 为什么需要 RAG`
+- 如果你分不清各个组件的作用，回看 [chapter-05-rag-basics.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-05-rag-basics.md) 里的 `## 核心概念`
+- 如果你的最小实验一直答偏，先回看 [chapter-05-rag-basics.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-05-rag-basics.md) 里的 `## 常见坑`
+
 ## 下一章预告
 
 下一章会继续在 RAG 上往前走，不再只看“能不能答”，而是看“答得准不准、稳不稳、能不能解释”。

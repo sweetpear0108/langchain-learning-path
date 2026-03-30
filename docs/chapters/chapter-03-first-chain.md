@@ -259,6 +259,32 @@ print(result)
 - Prompt、Model、Parser 组合起来能形成稳定的数据流
 - `AI 学习助手` 可以从这个最小版本开始逐步长大
 
+## 学完本章，你现在应该会
+
+- 说明“链”为什么比单个大函数更容易维护和扩展
+- 搭一个最小的 `AI 学习助手 V1` 链路并明确输入输出边界
+- 判断哪些逻辑该放在 Prompt，哪些该放在 Parser 或前置校验里
+- 说出如果后面接入 RAG，当前链里哪些部分可以直接复用
+
+## 最小验收 checklist
+
+- [ ] 我能写出一个接收主题并返回结构化学习建议的最小链
+- [ ] 我给链补了输入为空时的保护逻辑
+- [ ] 我能解释为什么链式结构更适合插日志、重试和替换模型
+- [ ] 我能说出本章链路和上一章抽象之间的对应关系
+
+## 建议你动手改一版
+
+- 把输出 4 个部分改成适合页面卡片展示的字段结构
+- 新增一个“学习顺序最多 3 步”的限制，练习如何同时改 Prompt 和 Parser
+- 给链增加一个简单日志，打印输入主题和生成结果，提前为后面调试做准备
+
+## 卡住时先回看这里
+
+- 如果你不知道链和普通函数差别在哪，回看 [chapter-03-first-chain.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-03-first-chain.md) 里的 `## 分模块讲解`
+- 如果你不确定最小示例真正想表达什么，回看 [chapter-03-first-chain.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-03-first-chain.md) 里的 `## 最小示例说明`
+- 如果你做不出实践题，先回看 [chapter-03-first-chain.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-03-first-chain.md) 里的 `## 本章实践`
+
 ## 下一章预告
 
 下一章会进入 Prompt 工程与输出控制。你会学习如何把模型输出做得更稳定、更可控、更适合程序消费。那一章会直接强化本章的链路结构，让 `AI 学习助手` 从“能用”走向“好用”。

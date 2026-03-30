@@ -259,6 +259,32 @@ langchain-learning-path/
 
 当 `AI 学习助手` 具备清晰结构、可访问站点、统一章节模板和可扩展后端边界时，这个学习路径才真正完成了从“知识整理”到“工程交付”的跃迁。
 
+## 学完本章，你现在应该会
+
+- 把整个学习路径整理成一个可公开访问的最小交付版本
+- 说明内容层、示例层、服务层、资源层各自负责什么
+- 判断哪些能力适合继续放在静态站，哪些必须留给独立后端
+- 给 `AI 学习助手` 写出一个范围可控的最终交付清单
+
+## 最小验收 checklist
+
+- [ ] 我能用一句话讲清楚这个项目最终要解决什么问题
+- [ ] 我已经梳理出站点入口、章节结构、示例目录和部署说明之间的关系
+- [ ] 我知道当前 phase 1 的交付边界在哪里，没有把后端能力混进静态站承诺里
+- [ ] 我能列出一个 5 项以内的最小可交付版本清单
+
+## 建议你动手改一版
+
+- 给首页草拟一版 30 秒内能看懂的入口信息架构
+- 选 1 到 2 章检查章节结构是否完全统一，提前为站点接入 `VitePress` 做准备
+- 写一个最短部署说明草稿，只覆盖静态站构建和 GitHub Pages 发布流程
+
+## 卡住时先回看这里
+
+- 如果你对最终交付范围没有把握，回看 [chapter-10-capstone-and-deployment.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-10-capstone-and-deployment.md) 里的 `## 章节定位`
+- 如果你不知道收尾工作该先做什么，回看 [chapter-10-capstone-and-deployment.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-10-capstone-and-deployment.md) 里的 `## 本章实践`
+- 如果你开始把系统做得过重，回看 [chapter-10-capstone-and-deployment.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-10-capstone-and-deployment.md) 里的 `## 常见坑`
+
 ## 下一步
 
 如果你继续扩展这个项目，接下来最值得做的事情不是再加一堆新功能，而是：

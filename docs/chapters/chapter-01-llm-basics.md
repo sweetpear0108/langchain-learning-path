@@ -272,6 +272,32 @@ if __name__ == "__main__":
 
 你现在已经具备继续学习 LangChain 的前提。下一章会正式进入 LangChain 的核心抽象，开始理解 `PromptTemplate`、`Chat Model`、`Output Parser` 和 `Runnable` 这些最关键的概念。
 
+## 学完本章，你现在应该会
+
+- 用自己的话解释什么是 `LLM 应用`，并说清它不等于单次模型调用
+- 说明 prompt、上下文、输出格式为什么都会影响最终效果
+- 画出一个最小问答脚本的输入到输出链路
+- 说清 `AI 学习助手 V0` 当前只解决什么问题，不解决什么问题
+
+## 最小验收 checklist
+
+- [ ] 我能描述一个最小 LLM 应用至少包含输入、模型调用和输出三个环节
+- [ ] 我能写出一个围绕单一主题的最小 prompt
+- [ ] 我知道同一个问题为什么会出现不同风格或不同质量的输出
+- [ ] 我能说出本章示例里哪些部分以后会被 LangChain 模块化接管
+
+## 建议你动手改一版
+
+- 把示例里的主题从 `LangChain` 改成你熟悉的技术主题，再观察输出是否还清晰
+- 给最小脚本增加一个 `style` 参数，让它支持“面向初学者”和“面向有经验开发者”两种回答风格
+- 补一个输入为空时的提示，先养成最基本的输入校验习惯
+
+## 卡住时先回看这里
+
+- 如果你分不清“模型调用”和“应用开发”，回看 [chapter-01-llm-basics.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-01-llm-basics.md) 里的 `## 1.1 什么是 LLM 应用`
+- 如果你不确定 prompt 到底在控制什么，回看 [chapter-01-llm-basics.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-01-llm-basics.md) 里的 `## 1.2 核心概念`
+- 如果你不知道主项目为什么现在还这么简单，回看 [chapter-01-llm-basics.md](/home/litianwei/langchain-learning-path/docs/chapters/chapter-01-llm-basics.md) 里的 `## 1.6 AI 学习助手 的第一步`
+
 ## 下一章预告
 
 下一章我们会把本章的最小问答脚本升级成可组合的 LangChain 结构，理解为什么 `prompt | model | parser` 是一个非常重要的工程起点。
