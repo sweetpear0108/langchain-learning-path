@@ -106,6 +106,7 @@ npm run docs:build
 
 ## 文档入口
 
+- [新手 Setup](./docs/guide/setup.md)
 - [文档首页](./docs/index.md)
 - [完整设计方案](./docs/DESIGN.md)
 - [完整课程大纲](./docs/COURSE_OUTLINE.md)

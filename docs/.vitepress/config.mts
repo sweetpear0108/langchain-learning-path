@@ -26,6 +26,7 @@ export default defineConfig({
         {
           text: "指南",
           items: [
+            { text: "新手 Setup", link: "/guide/setup" },
             { text: "快速开始", link: "/guide/getting-started" },
             { text: "学习路线图", link: "/guide/roadmap" }
           ]

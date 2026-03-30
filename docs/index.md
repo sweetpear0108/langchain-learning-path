@@ -7,8 +7,8 @@ hero:
   tagline: 面向中文开发者的章节化学习站。你不只是看概念，而是沿着 AI 学习助手这条主线，逐章完成 Prompt、链、RAG、Agent、LangGraph 和部署。
   actions:
     - theme: brand
-      text: 从快速开始进入
-      link: /guide/getting-started
+      text: 从新手 Setup 进入
+      link: /guide/setup
     - theme: alt
       text: 直接看章节
       link: /chapters/
@@ -81,6 +81,7 @@ features:
 ## 现在从哪里开始
 
 <div class="quick-links">
+  <a href="/guide/setup">新手 Setup</a>
   <a href="/guide/getting-started">快速开始</a>
   <a href="/guide/roadmap">学习路线图</a>
   <a href="/chapters/">章节目录</a>
@@ -90,9 +91,9 @@ features:
 
 如果你是第一次打开这个项目，建议先看：
 
-1. [快速开始](./guide/getting-started.md)
-2. [学习路线图](./guide/roadmap.md)
-3. [章节目录](./chapters/README.md)
+1. [新手 Setup](./guide/setup.md)
+2. [快速开始](./guide/getting-started.md)
+3. [学习路线图](./guide/roadmap.md)
 
 如果你想理解这套项目为什么这样设计，再看：
 
