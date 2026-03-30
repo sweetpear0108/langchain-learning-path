@@ -16,6 +16,7 @@ export default defineConfig({
       { text: "首页", link: "/" },
       { text: "快速开始", link: "/guide/getting-started" },
       { text: "学习计划", link: "/guide/study-plan" },
+      { text: "对比页", link: "/compare/" },
       { text: "路线图", link: "/guide/roadmap" },
       { text: "术语表", link: "/faq/glossary" },
       { text: "章节", link: "/chapters/" },
@@ -32,6 +33,21 @@ export default defineConfig({
             { text: "快速开始", link: "/guide/getting-started" },
             { text: "学习计划", link: "/guide/study-plan" },
             { text: "学习路线图", link: "/guide/roadmap" }
+          ]
+        }
+      ],
+      "/compare/": [
+        {
+          text: "方法对比",
+          items: [
+            { text: "对比页首页", link: "/compare/" },
+            { text: "LangChain vs LlamaIndex", link: "/compare/langchain-vs-llamaindex" },
+            { text: "Chain vs Agent", link: "/compare/chain-vs-agent" },
+            { text: "RAG vs Fine-tuning", link: "/compare/rag-vs-fine-tuning" },
+            {
+              text: "LangGraph vs 普通链式调用",
+              link: "/compare/langgraph-vs-linear-chains"
+            }
           ]
         }
       ],

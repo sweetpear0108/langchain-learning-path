@@ -83,6 +83,7 @@ features:
 <div class="quick-links">
   <a href="/guide/setup">新手 Setup</a>
   <a href="/guide/getting-started">快速开始</a>
+  <a href="/compare/">方法对比页</a>
   <a href="/guide/roadmap">学习路线图</a>
   <a href="/faq/glossary">术语表</a>
   <a href="/chapters/">章节目录</a>
@@ -100,3 +101,7 @@ features:
 
 - [完整设计方案](./DESIGN.md)
 - [完整课程大纲](./COURSE_OUTLINE.md)
+
+如果你已经开始做项目，想先建立“什么时候该选哪种方法”的判断，再看：
+
+- [方法对比页](./compare/README.md)
