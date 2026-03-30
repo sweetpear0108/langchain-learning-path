@@ -77,7 +77,9 @@ def print_report(root: Path) -> None:
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Inspect capstone structure and deployment readiness.")
+    parser = argparse.ArgumentParser(
+        description="Inspect capstone structure and deployment readiness."
+    )
     parser.add_argument(
         "--root",
         default="/home/litianwei/langchain-learning-path",

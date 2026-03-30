@@ -47,10 +47,7 @@ def fake_model(prompt_text: str) -> str:
 
 def build_chain():
     prompt = PromptTemplate.from_template(
-        "你是一个学习助手。\n"
-        "读者：{audience}\n"
-        "主题：{topic}\n"
-        "请生成一份简洁的学习计划。"
+        "你是一个学习助手。\n读者：{audience}\n主题：{topic}\n请生成一份简洁的学习计划。"
     )
     model = RunnableLambda(fake_model)
     parser = StrOutputParser()

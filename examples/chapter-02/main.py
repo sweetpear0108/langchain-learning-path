@@ -57,10 +57,7 @@ def pretty_print(value: Any) -> str:
 
 def main() -> None:
     prompt = PromptTemplate(
-        template=(
-            "你是一个中文 AI 学习助手。\n"
-            "请围绕主题 {topic} 输出一份结构化摘要。"
-        )
+        template=("你是一个中文 AI 学习助手。\n请围绕主题 {topic} 输出一份结构化摘要。")
     )
     model = DemoModel()
     parser = StructuredParser()

@@ -1,9 +1,9 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
 import json
-from pathlib import Path
 import re
+from dataclasses import dataclass
+from pathlib import Path
 from typing import Iterable
 
 from langchain_core.documents import Document
@@ -16,7 +16,13 @@ class RetrievedChunk:
     score: int
 
 
-DATASET_PATH = Path(__file__).resolve().parents[2] / "shared" / "datasets" / "chapter-06" / "course_materials.json"
+DATASET_PATH = (
+    Path(__file__).resolve().parents[2]
+    / "shared"
+    / "datasets"
+    / "chapter-06"
+    / "course_materials.json"
+)
 
 
 def load_course_materials(dataset_path: Path = DATASET_PATH) -> list[Document]:
@@ -27,7 +33,9 @@ def load_course_materials(dataset_path: Path = DATASET_PATH) -> list[Document]:
     ]
 
 
-def split_documents(documents: Iterable[Document], chunk_size: int, chunk_overlap: int) -> list[Document]:
+def split_documents(
+    documents: Iterable[Document], chunk_size: int, chunk_overlap: int
+) -> list[Document]:
     splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
     return splitter.split_documents(list(documents))
 
@@ -56,7 +64,9 @@ def retrieve(question: str, chunks: list[Document], top_k: int) -> list[Retrieve
 
 
 def compress_context(chunks: list[RetrievedChunk], max_chars: int = 240) -> str:
-    text = "\n".join(f"[{item.document.metadata.get('source')}] {item.document.page_content}" for item in chunks)
+    text = "\n".join(
+        f"[{item.document.metadata.get('source')}] {item.document.page_content}" for item in chunks
+    )
     return text[:max_chars]
 
 
@@ -69,7 +79,9 @@ def answer(question: str, context: str, mode: str) -> str:
     )
 
 
-def run_experiment(question: str, chunk_size: int, chunk_overlap: int, top_k: int, mode: str) -> None:
+def run_experiment(
+    question: str, chunk_size: int, chunk_overlap: int, top_k: int, mode: str
+) -> None:
     course_materials = load_course_materials()
     chunks = split_documents(course_materials, chunk_size=chunk_size, chunk_overlap=chunk_overlap)
     retrieved = retrieve(question, chunks, top_k=top_k)
@@ -83,7 +95,10 @@ def run_experiment(question: str, chunk_size: int, chunk_overlap: int, top_k: in
     print(f"Chunks: {len(chunks)}")
     print("Retrieved:")
     for item in retrieved:
-        print(f"- score={item.score} | {item.document.metadata.get('source')}: {item.document.page_content}")
+        print(
+            f"- score={item.score} | "
+            f"{item.document.metadata.get('source')}: {item.document.page_content}"
+        )
     print(f"Compressed context: {context}")
     print(answer(question, context, mode))
     print()

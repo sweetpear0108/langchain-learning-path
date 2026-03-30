@@ -34,6 +34,16 @@ python -m pip install -r requirements.txt
 
 如果你只想跑单章，继续在章节目录执行 `pip install -r requirements.txt` 也可以，章节文件会自动继承根级版本边界。
 
+如果你准备提交文档或示例改动，仓库也提供单独的开发依赖入口：
+
+```bash
+python -m pip install -r requirements-dev.txt
+npm install
+npm run lint
+```
+
+更具体的提交前检查约定见 `CONTRIBUTING.md`。
+
 ## 统一环境变量约定
 
 为后续把教学示例逐步切换到真实模型调用，仓库现在统一预留一套环境变量命名。

@@ -39,9 +39,7 @@ def toy_model(prompt_text: str) -> str:
 
 
 def build_loose_chain():
-    prompt = PromptTemplate.from_template(
-        "请介绍一下主题：{topic}"
-    )
+    prompt = PromptTemplate.from_template("请介绍一下主题：{topic}")
     return prompt | RunnableLambda(toy_model)
 
 

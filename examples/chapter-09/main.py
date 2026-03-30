@@ -3,8 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 import time
-from dataclasses import dataclass, asdict
-from typing import Callable
+from dataclasses import asdict, dataclass
 
 
 @dataclass(frozen=True)
@@ -87,10 +86,7 @@ class DemoLearningAssistant:
 
     def _generate_answer(self, question: str, route: str) -> str:
         if route == "rag":
-            return (
-                "RAG 通过检索外部知识，让模型基于资料回答，"
-                "从而减少纯生成猜测。"
-            )
+            return "RAG 通过检索外部知识，让模型基于资料回答，从而减少纯生成猜测。"
         if route == "agent":
             return (
                 "Agent 适合流程不固定、需要动态决策和多工具协作的任务；"

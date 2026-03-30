@@ -1,9 +1,9 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
 import json
-from pathlib import Path
 import re
+from dataclasses import dataclass
+from pathlib import Path
 from typing import Iterable
 
 from langchain_core.documents import Document
@@ -16,7 +16,13 @@ class RetrievedChunk:
     score: int
 
 
-DATASET_PATH = Path(__file__).resolve().parents[2] / "shared" / "datasets" / "chapter-05" / "course_materials.json"
+DATASET_PATH = (
+    Path(__file__).resolve().parents[2]
+    / "shared"
+    / "datasets"
+    / "chapter-05"
+    / "course_materials.json"
+)
 
 
 def load_course_materials(dataset_path: Path = DATASET_PATH) -> list[Document]:
@@ -50,7 +56,9 @@ def score_chunk(question: str, chunk: Document) -> int:
 
 
 def retrieve(question: str, chunks: list[Document], top_k: int = 3) -> list[RetrievedChunk]:
-    ranked = [RetrievedChunk(document=chunk, score=score_chunk(question, chunk)) for chunk in chunks]
+    ranked = [
+        RetrievedChunk(document=chunk, score=score_chunk(question, chunk)) for chunk in chunks
+    ]
     ranked.sort(key=lambda item: item.score, reverse=True)
     return [item for item in ranked[:top_k] if item.score > 0]
 
@@ -95,9 +103,12 @@ def main() -> None:
         retrieved = retrieve(question, chunks)
         print("=" * 80)
         print(f"Question: {question}")
-        print("Retrieved chunks:")
-        for item in retrieved:
-            print(f"- score={item.score} | {item.document.metadata.get('source')}: {item.document.page_content}")
+    print("Retrieved chunks:")
+    for item in retrieved:
+        print(
+            f"- score={item.score} | "
+            f"{item.document.metadata.get('source')}: {item.document.page_content}"
+        )
         print()
         print(synthesize_answer(question, retrieved))
         print()

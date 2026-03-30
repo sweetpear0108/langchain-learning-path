@@ -1,7 +1,6 @@
-from typing import Callable, Dict
+from typing import Callable
 
-
-State = Dict[str, str]
+State = dict[str, str]
 
 
 def classify(state: State) -> State:
@@ -45,7 +44,7 @@ def summarize(state: State) -> State:
     return state
 
 
-def build_graph() -> Dict[str, Callable[[State], State]]:
+def build_graph() -> dict[str, Callable[[State], State]]:
     return {
         "classify": classify,
         "retrieve": retrieve,

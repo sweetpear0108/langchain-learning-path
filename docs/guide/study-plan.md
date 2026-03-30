@@ -19,7 +19,7 @@
 | 章节 | 建议耗时 | 前提 | 完成标准 |
 | --- | --- | --- | --- |
 | [第 1 章：LLM 应用基础](../chapters/chapter-01-llm-basics.md) | 1.5 到 2 小时 | 会 Python 基础语法，听说过 Prompt 和 ChatGPT | 能解释最小 LLM 应用的输入、模型调用、输出三环节，并写出一个最小 Prompt |
-| [第 2 章：LangChain 核心抽象](../chapters/chapter-02-langchain-core.md) | 2 到 2.5 小时 | 已理解第 1 章的 Prompt、Message、Context | 能说清 `prompt | model | parser` 的职责，并设计一个简单结构化输出 |
+| [第 2 章：LangChain 核心抽象](../chapters/chapter-02-langchain-core.md) | 2 到 2.5 小时 | 已理解第 1 章的 Prompt、Message、Context | 能说清 `prompt \| model \| parser` 的职责，并设计一个简单结构化输出 |
 | [第 3 章：第一个链式应用](../chapters/chapter-03-first-chain.md) | 2 到 3 小时 | 已理解 LCEL、Runnable 和基础输入输出边界 | 能搭出最小 `AI 学习助手 V1`，并补上输入为空时的保护逻辑 |
 | [第 4 章：Prompt 工程与输出控制](../chapters/chapter-04-prompt-engineering.md) | 2 到 2.5 小时 | 已完成最小链式应用，知道 Prompt 和 Parser 的分工 | 能把一个模糊需求改写成有任务、约束、格式的 Prompt，并稳定输出固定结构 |
 | [第 5 章：RAG 入门](../chapters/chapter-05-rag-basics.md) | 2.5 到 3 小时 | 已掌握 LangChain 基础抽象和最小链路 | 能画出最小 RAG 流程，并用 3 到 5 篇资料完成一次最小检索问答实验 |
@@ -35,7 +35,7 @@
 
 | 天数 | 重点 | 预计投入 | 当天完成标准 |
 | --- | --- | --- | --- |
-| 第 1 天 | 第 1、2 章 | 3 小时 | 能解释 LLM 应用基础概念，并写出最小 `prompt | model | parser` 结构 |
+| 第 1 天 | 第 1、2 章 | 3 小时 | 能解释 LLM 应用基础概念，并写出最小 `prompt \| model \| parser` 结构 |
 | 第 2 天 | 第 3、4 章 | 3 小时 | 能跑通 `AI 学习助手 V1/V2` 的最小链路，并把输出稳定成固定结构 |
 | 第 3 天 | 第 5 章 | 2.5 到 3 小时 | 能用课程文档做一次最小 RAG 问答，确认“先检索再生成”成立 |
 | 第 4 天 | 第 6 章 | 2.5 到 3 小时 | 能记录一个 RAG 失败案例，并说明是切分、检索、上下文还是生成问题 |
