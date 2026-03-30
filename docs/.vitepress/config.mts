@@ -71,7 +71,10 @@ export default defineConfig({
       "/faq/": [
         {
           text: "帮助",
-          items: [{ text: "FAQ", link: "/faq/" }]
+          items: [
+            { text: "FAQ", link: "/faq/" },
+            { text: "故障排查", link: "/faq/troubleshooting" }
+          ]
         }
       ]
     },
