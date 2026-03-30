@@ -84,6 +84,7 @@ features:
   <a href="/guide/setup">新手 Setup</a>
   <a href="/guide/getting-started">快速开始</a>
   <a href="/guide/roadmap">学习路线图</a>
+  <a href="/faq/glossary">术语表</a>
   <a href="/chapters/">章节目录</a>
   <a href="/project/">主项目演进</a>
   <a href="/faq/">FAQ</a>

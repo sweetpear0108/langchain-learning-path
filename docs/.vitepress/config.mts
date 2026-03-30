@@ -16,6 +16,7 @@ export default defineConfig({
       { text: "首页", link: "/" },
       { text: "快速开始", link: "/guide/getting-started" },
       { text: "路线图", link: "/guide/roadmap" },
+      { text: "术语表", link: "/faq/glossary" },
       { text: "章节", link: "/chapters/" },
       { text: "示例代码", link: "/examples/" },
       { text: "主项目", link: "/project/" },
@@ -73,6 +74,7 @@ export default defineConfig({
           text: "帮助",
           items: [
             { text: "FAQ", link: "/faq/" },
+            { text: "术语表", link: "/faq/glossary" },
             { text: "故障排查", link: "/faq/troubleshooting" }
           ]
         }
