@@ -1,4 +1,6 @@
 # Shared Python dependency versions are managed at the repository root.
 -r ../requirements.txt
 
-# Add backend-only packages here when Phase 2 backend work starts.
+# Minimal backend placeholder for phase 2.
+fastapi>=0.116,<1
+uvicorn>=0.35,<1

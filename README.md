@@ -87,9 +87,9 @@ cp .env.example .env
 
 ### 这个基线还不包含什么
 
-- `Phase 2` 外部后端能力还没有开始交付
+- `Phase 2` 外部后端还只有最小 `FastAPI` 骨架，当前只是占位成果
 - 在线 playground、真实 API 调用和交互式实验页暂未提供
-- `backend/` 目录当前只用于预留结构，不代表后端已经完成
+- `backend/` 目录现在提供 `GET /health` 和 `GET /demo` 两个占位接口，用来明确未来接入方向，不代表后端能力已经完成
 - RAG、Tools、Agent、LangGraph 的在线演示仍以文档与本地示例为主
 
 项目目标不是堆概念，而是沿着一个持续演进的主项目 `AI 学习助手`，把以下能力连成一条主线：
@@ -135,9 +135,17 @@ npm run docs:build
 
 `Phase 2` 尚未开始，后续才会补：
 
-- 外部 `FastAPI` / LangChain 运行时
+- 真正可承载实验的外部 `FastAPI` / LangChain 运行时
 - 站内交互式实验页面
 - 更真实的线上演示、调试与观测链路
+
+当前为了让读者更容易理解边界，仓库已经补了一个最小后端占位成果：
+
+- `backend/app/main.py` 提供可启动的 `FastAPI` 骨架
+- `GET /health` 用于确认服务存活
+- `GET /demo` 用于说明未来 Phase 2 会往这里继续扩展
+
+如果你只是跟着当前教程学习，可以先把 `backend/` 理解为“已建立接口入口，但尚未承诺真实实验能力”。
 
 ## 文档入口
 
