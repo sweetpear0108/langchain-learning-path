@@ -1,6 +1,9 @@
 from dataclasses import dataclass
 from typing import Callable, Dict, List
 
+from langchain_core.messages import AIMessage, ToolMessage
+from langchain_core.tools import tool
+
 
 @dataclass
 class Tool:
@@ -45,14 +48,40 @@ TOOLS: List[Tool] = [
 ]
 
 
+@tool
+def search_outline_tool(chapter: str) -> str:
+    """Query the course outline for a chapter number."""
+    return search_outline(chapter)
+
+
+@tool
+def get_chapter_summary_tool(chapter: str) -> str:
+    """Read the summary for a chapter number."""
+    return get_chapter_summary(chapter)
+
+
+@tool
+def generate_practice_tool(topic: str) -> str:
+    """Generate practice questions for a topic."""
+    return generate_practice(topic)
+
+
+REAL_TOOLS = [
+    search_outline_tool,
+    get_chapter_summary_tool,
+    generate_practice_tool,
+]
+REAL_TOOL_REGISTRY = {tool_item.name: tool_item for tool_item in REAL_TOOLS}
+
+
 def route_question(question: str) -> Dict[str, str]:
     lower = question.lower()
-    if "第 7 章" in question or "第7章" in question or "chapter 7" in lower:
-        return {"tool": "get_chapter_summary", "input": "7"}
-    if "前置" in question or "先学" in question or "目录" in question:
-        return {"tool": "search_outline", "input": "7"}
     if "练习" in question or "题目" in question:
         return {"tool": "generate_practice", "input": "Tools 与 Agent"}
+    if "前置" in question or "先学" in question or "目录" in question:
+        return {"tool": "search_outline", "input": "7"}
+    if "第 7 章" in question or "第7章" in question or "chapter 7" in lower:
+        return {"tool": "get_chapter_summary", "input": "7"}
     return {"tool": "", "input": ""}
 
 
@@ -70,6 +99,62 @@ def agent_respond(question: str) -> str:
     tool = next(t for t in TOOLS if t.name == decision["tool"])
     tool_result = tool.handler(decision["input"])
     return f"Agent 选择了工具 `{tool.name}`：\n{tool_result}"
+
+
+def plan_tool_calls(question: str) -> AIMessage:
+    if "前置" in question or "先学" in question:
+        return AIMessage(
+            content="",
+            tool_calls=[
+                {
+                    "name": "search_outline_tool",
+                    "args": {"chapter": "7"},
+                    "id": "call-outline-7",
+                    "type": "tool_call",
+                },
+                {
+                    "name": "get_chapter_summary_tool",
+                    "args": {"chapter": "7"},
+                    "id": "call-summary-7",
+                    "type": "tool_call",
+                },
+            ],
+        )
+    if "练习" in question or "题目" in question:
+        return AIMessage(
+            content="",
+            tool_calls=[
+                {
+                    "name": "generate_practice_tool",
+                    "args": {"topic": "Tools 与 Agent"},
+                    "id": "call-practice-7",
+                    "type": "tool_call",
+                }
+            ],
+        )
+    return AIMessage(content="这个问题更适合先澄清需求，当前不发起工具调用。", tool_calls=[])
+
+
+def execute_tool_calls(tool_calls: list[dict]) -> list[ToolMessage]:
+    messages: list[ToolMessage] = []
+    for tool_call in tool_calls:
+        selected_tool = REAL_TOOL_REGISTRY[tool_call["name"]]
+        result = selected_tool.invoke(tool_call["args"])
+        messages.append(
+            ToolMessage(
+                content=result,
+                name=tool_call["name"],
+                tool_call_id=tool_call["id"],
+            )
+        )
+    return messages
+
+
+def summarize_tool_messages(question: str, tool_messages: list[ToolMessage]) -> str:
+    if not tool_messages:
+        return "没有触发工具。建议把问题缩小到章节查询、摘要读取或练习生成。"
+    evidence = "\n".join(f"- {message.name}: {message.content}" for message in tool_messages)
+    return f"问题：{question}\n工具证据：\n{evidence}\n最终答复：先看课程结构，再结合章节摘要安排练习。"
 
 
 def demo_tools() -> None:
@@ -96,9 +181,27 @@ def demo_agent() -> None:
         print()
 
 
+def demo_real_framework() -> None:
+    questions = [
+        "我想先学第 7 章，需要什么前置知识？",
+        "给我三道第 7 章的练习题",
+    ]
+    print("== 真实框架版 ==")
+    for question in questions:
+        ai_message = plan_tool_calls(question)
+        tool_messages = execute_tool_calls(ai_message.tool_calls)
+        print(f"Q: {question}")
+        print(f"planned tool calls: {ai_message.tool_calls}")
+        for tool_message in tool_messages:
+            print(f"tool[{tool_message.name}]: {tool_message.content}")
+        print(summarize_tool_messages(question, tool_messages))
+        print()
+
+
 if __name__ == "__main__":
     print("Chapter 07: Tools 与 Agent")
     print("主项目：AI 学习助手 V3")
     print()
     demo_tools()
     demo_agent()
+    demo_real_framework()

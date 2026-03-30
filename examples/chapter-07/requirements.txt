@@ -1,1 +1,4 @@
-# No third-party dependencies required for this teaching example.
+# Teaching mode uses only the standard library, while the real-framework
+# comparison uses langchain-core tool and message interfaces.
+-c ../../requirements.txt
+langchain-core

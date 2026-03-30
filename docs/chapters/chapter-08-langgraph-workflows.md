@@ -164,6 +164,18 @@ result = graph.invoke(state)
 
 这比单纯的 `prompt | model | parser` 更适合复杂系统。
 
+## 真实框架版对照
+
+`examples/chapter-08/main.py` 现在除了教学版，还补了一版真实 `StateGraph` 对照。
+
+它把同一个思路映射成更接近实际框架接口的写法：
+
+- 用 `TypedDict` 明确定义状态结构
+- 用 `StateGraph` 注册分类、目录查询、RAG、澄清这些节点
+- 用条件边把 `route` 显式映射到下一跳
+
+这样你在学 LangGraph 时，就不会停留在“图的概念”，而能直接看到这些概念在真实代码里的落点。
+
 ## 本章实践
 
 建议把本章实践做成 `AI 学习助手 V4`。

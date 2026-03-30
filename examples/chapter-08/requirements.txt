@@ -1,1 +1,5 @@
-# No third-party dependencies required for this teaching example.
+# Teaching mode has no dependency on LangGraph, but the real-framework
+# comparison uses the actual StateGraph API.
+-c ../../requirements.txt
+langchain-core
+langgraph>=1,<2

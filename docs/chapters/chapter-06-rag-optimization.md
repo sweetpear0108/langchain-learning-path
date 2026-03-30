@@ -185,6 +185,19 @@ answer = llm.generate(prompt.format(context=context, question=question))
 
 这个示例说明一个关键点：优化不只是“调一个参数”，而是对完整链路进行控制。
 
+## 真实框架版对照
+
+`examples/chapter-06/main.py` 增加了一组 `framework-baseline` 和 `framework-optimized` 对照输出。
+
+这两组对照重点不是追求“更强”，而是让你看到真实工程里常见的接口拆分：
+
+- query rewrite 先把问题改写成更适合检索的查询
+- retriever 负责返回候选片段
+- 重排和压缩负责把上下文收敛成可交给模型的证据
+- 最后仍然是 prompt + model 的生成阶段
+
+从这里开始，你应该逐渐把“优化 RAG”理解成一条可调试的数据流，而不是只调某个模型参数。
+
 ## 切分优化怎么做
 
 切分优化的原则很简单：让片段保持语义完整。

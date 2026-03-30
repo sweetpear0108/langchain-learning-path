@@ -141,6 +141,18 @@ result = agent.invoke({
 - Agent 自行判断是否需要调用工具
 - 最终把工具结果整合成答案
 
+## 真实框架版对照
+
+`examples/chapter-07/main.py` 新增了一个 `真实框架版` 演示，用来对照教学版的最小 Agent。
+
+这一版更接近真实 LangChain 接口的地方在于：
+
+- Tool 改成 `@tool` 装饰后的真实工具对象
+- Agent 规划结果用 `AIMessage.tool_calls` 表示
+- 工具执行结果回填为 `ToolMessage`
+
+你暂时还不需要在这一章就引入完整线上 agent runtime，但应该开始熟悉这些真实接口长什么样，因为后续排查 Agent 问题时，你看到的通常就是这些结构。
+
 ## 本章实践
 
 建议把本章实践做成 `AI 学习助手 V3`。
