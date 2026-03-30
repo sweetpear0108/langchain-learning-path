@@ -1,2 +1,5 @@
-langchain-core>=0.3.0
-langchain-text-splitters>=0.3.0
+# Keep chapter installs lightweight while sharing version boundaries from the
+# repository root.
+-c ../../requirements.txt
+langchain-core
+langchain-text-splitters

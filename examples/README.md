@@ -19,7 +19,15 @@
 
 优先阅读每个章节目录下的 `README.md`。
 
-典型流程：
+如果你要连续跑多个 LangChain 章节，优先在仓库根目录准备一套共享环境：
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install -r requirements.txt
+```
+
+典型单章流程仍然保留：
 
 ```bash
 cd examples/chapter-03
@@ -29,4 +37,4 @@ pip install -r requirements.txt
 python3 main.py
 ```
 
-如果某一章不需要第三方依赖，会在该章节的 `README.md` 中直接说明。
+`chapter-03` 到 `chapter-06` 的章节级 `requirements.txt` 会自动复用根目录的版本边界；如果某一章不需要第三方依赖，会在该章节的 `README.md` 中直接说明。

@@ -1,0 +1,10 @@
+# Shared Python dependency entrypoint for LangChain-based chapters.
+#
+# Install from the repository root when you want one environment that can run
+# the LangChain examples and future backend code:
+#   python -m pip install -r requirements.txt
+#
+# Chapter-local requirements files keep working, but they delegate version
+# control back to this file so upgrades and rollbacks happen in one place.
+langchain-core>=0.3,<1
+langchain-text-splitters>=0.3,<1

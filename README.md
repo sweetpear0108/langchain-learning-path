@@ -17,10 +17,22 @@
 
 补充说明：
 
-- `chapter-03` 和 `chapter-04` 当前直接声明了 `langchain-core>=0.3,<1`
-- `chapter-05` 和 `chapter-06` 当前声明的是 `langchain-core>=0.3.0` 与 `langchain-text-splitters>=0.3.0`，阅读和安装时同样按 `0.3.x` 到 `<1` 的兼容边界理解
+- 仓库根目录现在提供统一 Python 入口：`requirements.txt`
+- `chapter-03` 到 `chapter-06` 的 `requirements.txt` 继续保留，但它们通过根级约束文件共享同一套版本边界，避免章节之间各自漂移
+- `backend/requirements.txt` 也转为复用根级依赖入口，后续 Phase 2 只需要在该文件追加后端专属依赖
+- 暂时不新增 `requirements-dev.txt`：当前仓库还没有统一的 Python lint/test 工具链，现在强行拆一份开发依赖只会制造第二套入口
 - 文档站前端依赖以仓库提交里的 `package-lock.json` 为准
 - 教程内容始终以仓库当前提交中锁定的依赖声明为准，而不是以上游最新版本为准
+
+如果你准备连续跑多个 LangChain 章节，建议在仓库根目录创建一个虚拟环境后直接安装：
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+```
+
+如果你只想跑单章，继续在章节目录执行 `pip install -r requirements.txt` 也可以，章节文件会自动继承根级版本边界。
 
 ## 当前发布基线
 

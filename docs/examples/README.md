@@ -13,13 +13,23 @@ python3 main.py
 
 需要安装依赖的章节：
 
+如果你打算连续跑多个 LangChain 章节，先在仓库根目录准备共享环境：
+
 ```bash
-cd examples/chapter-03
 python3 -m venv .venv
 source .venv/bin/activate
+python3 -m pip install -r requirements.txt
+```
+
+如果你只跑单章，继续使用章节目录里的 `requirements.txt`：
+
+```bash
+cd examples/chapter-03
 pip install -r requirements.txt
 python3 main.py
 ```
+
+根目录的 `requirements.txt` 是统一升级入口；`chapter-03` 到 `chapter-06` 的章节级 `requirements.txt` 会自动继承这套版本边界。
 
 ## 章节与目录对应关系
 

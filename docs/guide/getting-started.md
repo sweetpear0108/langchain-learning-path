@@ -56,6 +56,14 @@ npm run docs:preview
 - Python 3.11+
 - 能创建虚拟环境
 
+如果你准备连续跑多个 LangChain 章节，先在仓库根目录安装共享依赖最省事：
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+```
+
 以某一章示例为例：
 
 ```bash
@@ -65,6 +73,8 @@ source .venv/bin/activate
 pip install -r requirements.txt
 python main.py
 ```
+
+`chapter-03` 到 `chapter-06` 的 `requirements.txt` 会自动继承仓库根目录的版本边界，所以单章安装和根目录统一安装不会出现版本分叉。
 
 如果章节示例需要模型 API Key，会在该章节目录下提供 `.env.example`，并在 `README.md` 写清楚变量名和用途。
 
