@@ -2,6 +2,26 @@
 
 这是一个面向中文开发者的 LangChain 章节化学习项目。
 
+## 推荐环境与版本基线
+
+为避免跟着上游版本快速漂移，本仓库当前推荐使用以下本地环境：
+
+- `Python 3.11`
+- `Node.js 20 LTS`
+- `npm` 使用与 `Node.js 20 LTS` 配套的默认版本即可
+
+当前教程涉及的 Python 依赖边界以仓库内的 `requirements.txt` 为准，推荐按下面的范围理解和安装：
+
+- `langchain-core>=0.3,<1`
+- `langchain-text-splitters>=0.3,<1`
+
+补充说明：
+
+- `chapter-03` 和 `chapter-04` 当前直接声明了 `langchain-core>=0.3,<1`
+- `chapter-05` 和 `chapter-06` 当前声明的是 `langchain-core>=0.3.0` 与 `langchain-text-splitters>=0.3.0`，阅读和安装时同样按 `0.3.x` 到 `<1` 的兼容边界理解
+- 文档站前端依赖以仓库提交里的 `package-lock.json` 为准
+- 教程内容始终以仓库当前提交中锁定的依赖声明为准，而不是以上游最新版本为准
+
 ## 当前发布基线
 
 当前仓库冻结为第一个可发布的 `Phase 1` 基线。
