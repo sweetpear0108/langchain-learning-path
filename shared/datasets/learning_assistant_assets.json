@@ -1,0 +1,68 @@
+{
+  "project": "AI 学习助手",
+  "chapters": [
+    {
+      "chapter": "chapter-04",
+      "theme": "Prompt 工程与输出控制",
+      "reusable_assets": [
+        "shared/prompts/learning-assistant-system.txt"
+      ],
+      "teaching_goal": "把模糊请求改写成带角色、约束和格式的稳定输出"
+    },
+    {
+      "chapter": "chapter-05",
+      "theme": "RAG 入门",
+      "reusable_assets": [
+        "shared/prompts/rag-grounded-answer.txt",
+        "shared/diagrams/rag-baseline-flow.md"
+      ],
+      "teaching_goal": "理解准备知识库、切分、检索、拼装上下文和回答的基础流程"
+    },
+    {
+      "chapter": "chapter-06",
+      "theme": "RAG 进阶优化",
+      "reusable_assets": [
+        "shared/prompts/query-rewrite.txt",
+        "shared/prompts/rag-grounded-answer.txt",
+        "shared/diagrams/rag-optimization-loop.md"
+      ],
+      "teaching_goal": "比较切分、检索、重排和上下文压缩策略带来的效果差异"
+    },
+    {
+      "chapter": "chapter-10",
+      "theme": "综合实战与公开部署",
+      "reusable_assets": [
+        "shared/prompts/",
+        "shared/datasets/",
+        "shared/diagrams/"
+      ],
+      "teaching_goal": "把共享资源沉淀为可复用资产，而不是把所有材料散落在各章节里"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "prompt-page-summary",
+      "user_question": "请把 Prompt 工程这一章整理成适合网页展示的学习卡片。",
+      "expected_assets": [
+        "shared/prompts/learning-assistant-system.txt"
+      ]
+    },
+    {
+      "id": "rag-grounded-qa",
+      "user_question": "为什么课程站里的问答要先检索资料再回答？",
+      "expected_assets": [
+        "shared/prompts/rag-grounded-answer.txt",
+        "shared/datasets/chapter-05/course_materials.json"
+      ]
+    },
+    {
+      "id": "rag-optimization-debug",
+      "user_question": "第 6 章为什么强调不要只调模型？",
+      "expected_assets": [
+        "shared/prompts/query-rewrite.txt",
+        "shared/datasets/chapter-06/course_materials.json",
+        "shared/diagrams/rag-optimization-loop.md"
+      ]
+    }
+  ]
+}
