@@ -34,6 +34,31 @@ python -m pip install -r requirements.txt
 
 如果你只想跑单章，继续在章节目录执行 `pip install -r requirements.txt` 也可以，章节文件会自动继承根级版本边界。
 
+## 统一环境变量约定
+
+为后续把教学示例逐步切换到真实模型调用，仓库现在统一预留一套环境变量命名。
+
+- 根目录提供统一模板：`.env.example`
+- 需要继续扩展为真实模型调用的章节目录也提供各自的 `.env.example`
+- 后续默认优先复用这些变量名，而不是按章节发散出不同命名
+
+当前约定的核心变量如下：
+
+- `MODEL_PROVIDER`：模型提供方标识，便于后续在相同代码结构里切换实现
+- `MODEL_NAME`：聊天模型名，统一作为主模型入口
+- `EMBEDDING_MODEL_NAME`：向量化或检索相关模型名，主要给 RAG 章节预留
+- `OPENAI_API_KEY`：兼容 OpenAI 风格接口的密钥变量名
+- `OPENAI_BASE_URL`：兼容 OpenAI 风格接口的可选基础地址
+- `LANGSMITH_API_KEY` / `LANGSMITH_TRACING`：给第 9 章及后续观测链路预留
+
+使用方式保持简单：
+
+```bash
+cp .env.example .env
+```
+
+如果你在某个章节里单独试验真实模型，也可以复制该章节目录下的 `.env.example`。当前多数示例仍然使用本地占位实现，不会主动读取这些变量；它们的作用是先把目录规范和命名规范固定下来，避免后续接入真实模型时重新改一轮结构。
+
 ## 当前发布基线
 
 当前仓库冻结为第一个可发布的 `Phase 1` 基线。

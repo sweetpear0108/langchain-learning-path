@@ -52,3 +52,13 @@ python3 main.py
 ```
 
 `chapter-03` 到 `chapter-06` 的章节级 `requirements.txt` 会自动复用根目录的版本边界；如果某一章不需要第三方依赖，会在该章节的 `README.md` 中直接说明。
+
+## 未来真实模型接入约定
+
+从 `chapter-03` 开始，相关章节目录会逐步预留 `.env.example`，统一未来接入真实模型时的变量命名。
+
+- 通用主变量：`MODEL_PROVIDER`、`MODEL_NAME`、`OPENAI_API_KEY`
+- RAG 相关章节额外预留：`EMBEDDING_MODEL_NAME`
+- 评估与观测相关章节额外预留：`LANGSMITH_API_KEY`、`LANGSMITH_TRACING`
+
+这些模板当前主要用于固定接口和目录规范。即使示例还没有真的读取 `.env`，后续替换本地占位模型时也不需要重新发明命名方式。
