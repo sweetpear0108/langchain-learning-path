@@ -17,7 +17,10 @@
     "format": "python3 -m ruff check . --fix && python3 -m ruff format ."
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.27",
     "markdownlint-cli2": "^0.18.1",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^3.4.19",
     "vitepress": "^1.6.3"
   }
 }

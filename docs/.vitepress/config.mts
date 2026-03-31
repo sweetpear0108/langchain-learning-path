@@ -8,6 +8,7 @@ export default defineConfig({
   title: "LangChain Learning Path",
   description: "一个面向中文开发者的 LangChain 章节化学习站。",
   base,
+  appearance: false,
   cleanUrls: true,
   lastUpdated: true,
   themeConfig: {
