@@ -105,7 +105,7 @@ body,
 .VPNavBar .container {
   min-height: 64px;
   padding: 0 18px;
-  border: 1px solid var(--flat-line);
+  border: 1px solid #e4ebf1;
   border-radius: 14px;
   background: #ffffff;
 }
@@ -170,8 +170,8 @@ body,
 
 .VPHero .text {
   max-width: none;
-  font-size: clamp(1.9rem, 3.8vw, 3.15rem);
-  line-height: 1.08;
+  font-size: clamp(1.65rem, 3vw, 2.5rem);
+  line-height: 1.12;
   letter-spacing: -0.02em;
   color: var(--flat-ink);
 }
@@ -295,10 +295,13 @@ body,
 }
 
 .VPNavBarMenuLink.active::after,
-.VPNavBarMenuGroup.active .button::after,
+.VPNavBarMenuGroup.active .button::after {
+  background: var(--flat-ink);
+}
+
 .VPNavBarMenuLink:hover::after,
 .VPNavBarMenuGroup .button:hover::after {
-  background: var(--flat-blue);
+  background: var(--flat-line);
 }
 
 .VPFlyout {
@@ -308,21 +311,25 @@ body,
 }
 
 .DocSearch-Button {
-  min-height: 38px;
-  min-width: 196px;
-  padding: 0 12px;
-  border: 1px solid var(--flat-line);
-  border-radius: 999px;
-  background: #ffffff;
+  min-height: 34px;
+  min-width: auto;
+  padding: 0 4px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
 }
 
 .DocSearch-Button:hover {
-  background: var(--flat-muted);
-  border-color: var(--flat-blue);
+  background: transparent;
+  border-color: transparent;
 }
 
 .DocSearch-Button-Container {
   gap: 8px;
+}
+
+.DocSearch-Button-Placeholder {
+  color: var(--flat-ink-soft);
 }
 
 .DocSearch-Button-Placeholder,
@@ -332,6 +339,7 @@ body,
 
 .DocSearch-Button-Keys {
   min-width: auto;
+  margin-left: 6px;
 }
 
 .DocSearch-Button-Key {
@@ -339,6 +347,10 @@ body,
   padding: 0;
   border: 0;
   background: transparent;
+  color: var(--flat-ink-soft);
+}
+
+.DocSearch-Search-Icon {
   color: var(--flat-ink-soft);
 }
 
