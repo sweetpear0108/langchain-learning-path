@@ -94,13 +94,44 @@ body,
 }
 
 .VPNavBar {
+  background: transparent;
+  border-bottom: 0;
+}
+
+.VPNavBar .wrapper {
+  padding: 14px 24px 10px;
+}
+
+.VPNavBar .container {
+  min-height: 64px;
+  padding: 0 18px;
+  border: 1px solid var(--flat-line);
+  border-radius: 14px;
   background: #ffffff;
-  border-bottom: 1px solid var(--flat-line);
+}
+
+.VPNavBar .title {
+  flex-shrink: 0;
 }
 
 .VPNavBarTitle .title {
+  gap: 10px;
   font-weight: 800;
   color: var(--flat-ink);
+  text-decoration: none;
+}
+
+.VPNavBarTitle .logo {
+  width: 28px;
+  height: 28px;
+  padding: 4px;
+  border: 1px solid var(--flat-line);
+  border-radius: 8px;
+  background: var(--flat-muted);
+}
+
+.VPNavBarSearch {
+  margin-right: 8px;
 }
 
 .VPNavBarTitle .title,
@@ -125,7 +156,7 @@ body,
 }
 
 .VPHero .main {
-  max-width: 860px;
+  max-width: 980px;
 }
 
 .VPHero .name {
@@ -138,9 +169,10 @@ body,
 }
 
 .VPHero .text {
-  max-width: 11ch;
-  font-size: clamp(2.35rem, 5vw, 4.4rem);
-  line-height: 1.04;
+  max-width: none;
+  font-size: clamp(1.9rem, 3.8vw, 3.15rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
   color: var(--flat-ink);
 }
 
@@ -207,20 +239,23 @@ body,
 .VPSidebarItem .item,
 .VPLocalNav .menu,
 .VPLocalNav .menu-link {
-  border-radius: 8px;
-  border: 1px solid transparent;
+  border-radius: 0;
+  border: 0;
   font-weight: 700;
   transition:
     background-color 0.2s ease,
     border-color 0.2s ease,
-    color 0.2s ease;
+    color 0.2s ease,
+    opacity 0.2s ease;
 }
 
 .VPNavBarMenuLink,
 .VPNavBarMenuGroup .button {
-  min-height: 40px;
-  padding-inline: 14px;
+  min-height: 36px;
+  padding-inline: 10px;
   color: var(--flat-ink-soft);
+  background: transparent;
+  position: relative;
 }
 
 .VPNavBarMenuLink:hover,
@@ -229,25 +264,41 @@ body,
 .VPFlyout .link:hover,
 .VPSidebarItem .link:hover,
 .VPSidebarItem .item:hover {
-  background: var(--flat-muted);
-  border-color: var(--flat-line);
+  background: transparent;
   color: var(--flat-blue-dark);
 }
 
 .VPNavBarMenuLink.active,
 .VPNavBarMenuGroup.active .button,
 .VPNavScreenMenuLink.active {
-  background: var(--flat-blue);
-  border-color: var(--flat-blue-dark);
-  color: #ffffff;
+  background: transparent;
+  color: var(--flat-ink);
 }
 
 .VPNavBarMenuLink.active:hover,
 .VPNavBarMenuGroup.active .button:hover,
 .VPNavScreenMenuLink.active:hover {
-  background: var(--flat-blue-dark);
-  border-color: var(--flat-blue-dark);
-  color: #ffffff;
+  background: transparent;
+  color: var(--flat-ink);
+}
+
+.VPNavBarMenuLink::after,
+.VPNavBarMenuGroup .button::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  bottom: 2px;
+  left: 10px;
+  height: 2px;
+  background: transparent;
+  transition: background-color 0.2s ease;
+}
+
+.VPNavBarMenuLink.active::after,
+.VPNavBarMenuGroup.active .button::after,
+.VPNavBarMenuLink:hover::after,
+.VPNavBarMenuGroup .button:hover::after {
+  background: var(--flat-blue);
 }
 
 .VPFlyout {
@@ -257,15 +308,38 @@ body,
 }
 
 .DocSearch-Button {
-  min-height: 40px;
+  min-height: 38px;
+  min-width: 196px;
+  padding: 0 12px;
   border: 1px solid var(--flat-line);
-  border-radius: 8px;
-  background: var(--flat-muted);
+  border-radius: 999px;
+  background: #ffffff;
 }
 
 .DocSearch-Button:hover {
-  background: #ffffff;
+  background: var(--flat-muted);
   border-color: var(--flat-blue);
+}
+
+.DocSearch-Button-Container {
+  gap: 8px;
+}
+
+.DocSearch-Button-Placeholder,
+.DocSearch-Button-Key {
+  font-size: 0.84rem;
+}
+
+.DocSearch-Button-Keys {
+  min-width: auto;
+}
+
+.DocSearch-Button-Key {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--flat-ink-soft);
 }
 
 .DocSearch-Modal,
