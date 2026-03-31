@@ -99,14 +99,15 @@ body,
 }
 
 .VPNavBar .wrapper {
-  padding: 14px 24px 10px;
+  padding: 10px 24px 8px;
 }
 
 .VPNavBar .container {
-  min-height: 64px;
-  padding: 0 18px;
-  border: 1px solid #e4ebf1;
-  border-radius: 14px;
+  min-height: 56px;
+  padding: 0 8px 0 2px;
+  border: 0;
+  border-bottom: 1px solid #dde6ee;
+  border-radius: 0;
   background: #ffffff;
 }
 
@@ -122,12 +123,12 @@ body,
 }
 
 .VPNavBarTitle .logo {
-  width: 28px;
-  height: 28px;
-  padding: 4px;
-  border: 1px solid var(--flat-line);
-  border-radius: 8px;
-  background: var(--flat-muted);
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
 }
 
 .VPNavBarSearch {
@@ -143,92 +144,43 @@ body,
 }
 
 .VPHero {
-  padding-top: 28px;
-  padding-bottom: 28px;
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
 
 .VPHero .container {
-  border: 1px solid var(--flat-line);
-  border-top: 6px solid var(--flat-blue);
-  border-radius: 8px;
-  background: #ffffff;
-  padding: 32px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  padding: 8px 0 0;
 }
 
 .VPHero .main {
-  max-width: 980px;
+  max-width: 780px;
 }
 
 .VPHero .name {
-  font-size: 0.84rem;
+  font-size: 0.78rem;
   line-height: 1.2;
   font-weight: 800;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--flat-blue-dark);
+  color: var(--flat-ink-soft);
 }
 
 .VPHero .text {
   max-width: none;
-  font-size: clamp(1.65rem, 3vw, 2.5rem);
-  line-height: 1.12;
+  font-size: clamp(1.5rem, 2.3vw, 2.1rem);
+  line-height: 1.18;
   letter-spacing: -0.02em;
   color: var(--flat-ink);
 }
 
 .VPHero .tagline {
-  max-width: 56rem;
+  max-width: 34rem;
   color: var(--flat-ink-soft);
-  font-size: 1.02rem;
-  line-height: 1.75;
-}
-
-.VPHero .actions {
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-.VPButton,
-.VPHero .action {
-  min-height: 48px;
-  border-radius: 8px !important;
-  border-width: 1px;
-  font-weight: 700;
-}
-
-.VPHero .action {
-  min-height: auto;
-}
-
-.VPButton.medium {
-  padding: 0 20px;
-}
-
-.VPHero .action .VPButton {
-  min-height: auto;
-  padding: 0;
-  border: 0;
-  border-radius: 0 !important;
-  background: transparent;
-  color: var(--flat-blue-dark);
   font-size: 0.95rem;
-  line-height: 1.4;
-}
-
-.VPHero .action .VPButton.brand,
-.VPHero .action .VPButton.alt {
-  border: 0;
-  background: transparent;
-  color: var(--flat-blue-dark);
-}
-
-.VPHero .action .VPButton:hover,
-.VPHero .action .VPButton:focus-visible {
-  background: transparent;
-  color: var(--flat-ink);
-  text-decoration: underline;
-  text-decoration-color: currentColor;
-  text-underline-offset: 0.18em;
+  line-height: 1.6;
 }
 
 .VPNavBarMenuLink,
@@ -252,7 +204,7 @@ body,
 .VPNavBarMenuLink,
 .VPNavBarMenuGroup .button {
   min-height: 36px;
-  padding-inline: 10px;
+  padding-inline: 12px;
   color: var(--flat-ink-soft);
   background: transparent;
   position: relative;
@@ -313,7 +265,7 @@ body,
 .DocSearch-Button {
   min-height: 34px;
   min-width: auto;
-  padding: 0 4px;
+  padding: 0 10px 0 6px;
   border: 0;
   border-radius: 0;
   background: transparent;
@@ -348,6 +300,10 @@ body,
   border: 0;
   background: transparent;
   color: var(--flat-ink-soft);
+}
+
+.DocSearch-Button-Keys .DocSearch-Button-Key:first-child {
+  display: none;
 }
 
 .DocSearch-Search-Icon {
