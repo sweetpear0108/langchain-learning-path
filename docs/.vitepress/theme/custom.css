@@ -152,7 +152,7 @@ body,
 }
 
 .VPHero .actions {
-  gap: 12px;
+  gap: 18px;
   flex-wrap: wrap;
 }
 
@@ -164,8 +164,39 @@ body,
   font-weight: 700;
 }
 
+.VPHero .action {
+  min-height: auto;
+}
+
 .VPButton.medium {
   padding: 0 20px;
+}
+
+.VPHero .action .VPButton {
+  min-height: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0 !important;
+  background: transparent;
+  color: var(--flat-blue-dark);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.VPHero .action .VPButton.brand,
+.VPHero .action .VPButton.alt {
+  border: 0;
+  background: transparent;
+  color: var(--flat-blue-dark);
+}
+
+.VPHero .action .VPButton:hover,
+.VPHero .action .VPButton:focus-visible {
+  background: transparent;
+  color: var(--flat-ink);
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-underline-offset: 0.18em;
 }
 
 .VPNavBarMenuLink,
