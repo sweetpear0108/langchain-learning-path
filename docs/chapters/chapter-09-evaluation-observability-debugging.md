@@ -306,9 +306,9 @@ LLM 应用需要多次运行观察波动，尤其是开放式问答。
 
 ## 卡住时先回看这里
 
-- 如果你还在凭直觉判断效果，回看 [chapter-09-evaluation-observability-debugging.md](/chapters/chapter-09-evaluation-observability-debugging) 里的 `## 核心概念`
-- 如果你不知道最小评估该从哪里起步，回看 [chapter-09-evaluation-observability-debugging.md](/chapters/chapter-09-evaluation-observability-debugging) 里的 `## 本章实践`
-- 如果你只盯着最终回答不看中间过程，回看 [chapter-09-evaluation-observability-debugging.md](/chapters/chapter-09-evaluation-observability-debugging) 里的 `## 常见坑`
+- 如果你还在凭直觉判断效果，回看 [chapter-09-evaluation-observability-debugging.md](./chapter-09-evaluation-observability-debugging) 里的 `## 核心概念`
+- 如果你不知道最小评估该从哪里起步，回看 [chapter-09-evaluation-observability-debugging.md](./chapter-09-evaluation-observability-debugging) 里的 `## 本章实践`
+- 如果你只盯着最终回答不看中间过程，回看 [chapter-09-evaluation-observability-debugging.md](./chapter-09-evaluation-observability-debugging) 里的 `## 常见坑`
 
 ## 下一步
 

@@ -281,9 +281,9 @@ langchain-learning-path/
 
 ## 卡住时先回看这里
 
-- 如果你对最终交付范围没有把握，回看 [chapter-10-capstone-and-deployment.md](/chapters/chapter-10-capstone-and-deployment) 里的 `## 章节定位`
-- 如果你不知道收尾工作该先做什么，回看 [chapter-10-capstone-and-deployment.md](/chapters/chapter-10-capstone-and-deployment) 里的 `## 本章实践`
-- 如果你开始把系统做得过重，回看 [chapter-10-capstone-and-deployment.md](/chapters/chapter-10-capstone-and-deployment) 里的 `## 常见坑`
+- 如果你对最终交付范围没有把握，回看 [chapter-10-capstone-and-deployment.md](./chapter-10-capstone-and-deployment) 里的 `## 章节定位`
+- 如果你不知道收尾工作该先做什么，回看 [chapter-10-capstone-and-deployment.md](./chapter-10-capstone-and-deployment) 里的 `## 本章实践`
+- 如果你开始把系统做得过重，回看 [chapter-10-capstone-and-deployment.md](./chapter-10-capstone-and-deployment) 里的 `## 常见坑`
 
 ## 下一步
 

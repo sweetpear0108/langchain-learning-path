@@ -42,15 +42,15 @@ features:
     <h3>开始学习</h3>
     <p>适合第一次进入仓库的读者，先完成环境准备，再建立阅读顺序和学习节奏。</p>
     <div class="nav-link-list">
-      <a class="nav-link-item" href="/guide/setup">
+      <a class="nav-link-item" href="./guide/setup">
         <strong>新手 Setup</strong>
         <span>先把文档站和第一个示例跑起来。</span>
       </a>
-      <a class="nav-link-item" href="/guide/getting-started">
+      <a class="nav-link-item" href="./guide/getting-started">
         <strong>快速开始</strong>
         <span>理解这套学习站怎么读、先看什么。</span>
       </a>
-      <a class="nav-link-item" href="/guide/study-plan">
+      <a class="nav-link-item" href="./guide/study-plan">
         <strong>学习计划</strong>
         <span>按 7 天、14 天、30 天节奏安排学习。</span>
       </a>
@@ -61,19 +61,19 @@ features:
     <h3>课程与项目</h3>
     <p>适合已经开始系统学习的人，直接进入章节、主项目和示例代码三条主线。</p>
     <div class="nav-link-list">
-      <a class="nav-link-item" href="/chapters/">
+      <a class="nav-link-item" href="./chapters/">
         <strong>章节目录</strong>
         <span>从第 1 章到第 10 章按顺序推进。</span>
       </a>
-      <a class="nav-link-item" href="/project/">
+      <a class="nav-link-item" href="./project/">
         <strong>主项目</strong>
         <span>跟着 AI 学习助手的版本演进理解能力落点。</span>
       </a>
-      <a class="nav-link-item" href="/examples/">
+      <a class="nav-link-item" href="./examples/">
         <strong>示例代码</strong>
         <span>查看每章对应的最小可运行示例。</span>
       </a>
-      <a class="nav-link-item" href="/compare/">
+      <a class="nav-link-item" href="./compare/">
         <strong>方法对比</strong>
         <span>建立 Chain、Agent、RAG、LangGraph 的选择判断。</span>
       </a>
@@ -84,19 +84,19 @@ features:
     <h3>支持与参考</h3>
     <p>适合查概念、解问题和补背景，减少在章节之间反复跳转的成本。</p>
     <div class="nav-link-list">
-      <a class="nav-link-item" href="/guide/roadmap">
+      <a class="nav-link-item" href="./guide/roadmap">
         <strong>学习路线图</strong>
         <span>先看整体教学路径和阶段目标。</span>
       </a>
-      <a class="nav-link-item" href="/faq/glossary">
+      <a class="nav-link-item" href="./faq/glossary">
         <strong>术语表</strong>
         <span>快速回查 Runnable、Retriever、Trace 等高频术语。</span>
       </a>
-      <a class="nav-link-item" href="/faq/">
+      <a class="nav-link-item" href="./faq/">
         <strong>FAQ</strong>
         <span>集中查看常见问题和排查入口。</span>
       </a>
-      <a class="nav-link-item" href="/faq/troubleshooting">
+      <a class="nav-link-item" href="./faq/troubleshooting">
         <strong>故障排查</strong>
         <span>遇到环境或构建问题时，直接查看定位建议。</span>
       </a>
@@ -155,14 +155,14 @@ features:
 ## 推荐入口
 
 <div class="quick-links">
-  <a href="/guide/setup">新手 Setup</a>
-  <a href="/guide/getting-started">快速开始</a>
-  <a href="/compare/">方法对比页</a>
-  <a href="/guide/roadmap">学习路线图</a>
-  <a href="/faq/glossary">术语表</a>
-  <a href="/chapters/">章节目录</a>
-  <a href="/project/">主项目演进</a>
-  <a href="/faq/">FAQ</a>
+  <a href="./guide/setup">新手 Setup</a>
+  <a href="./guide/getting-started">快速开始</a>
+  <a href="./compare/">方法对比页</a>
+  <a href="./guide/roadmap">学习路线图</a>
+  <a href="./faq/glossary">术语表</a>
+  <a href="./chapters/">章节目录</a>
+  <a href="./project/">主项目演进</a>
+  <a href="./faq/">FAQ</a>
 </div>
 
 第一次进入本项目，建议先看：

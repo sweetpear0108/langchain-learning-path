@@ -291,9 +291,9 @@ print(result)
 
 ## 卡住时先回看这里
 
-- 如果你不知道链和普通函数差别在哪，回看 [chapter-03-first-chain.md](/chapters/chapter-03-first-chain) 里的 `## 分模块讲解`
-- 如果你不确定最小示例真正想表达什么，回看 [chapter-03-first-chain.md](/chapters/chapter-03-first-chain) 里的 `## 最小示例说明`
-- 如果你做不出实践题，先回看 [chapter-03-first-chain.md](/chapters/chapter-03-first-chain) 里的 `## 本章实践`
+- 如果你不知道链和普通函数差别在哪，回看 [chapter-03-first-chain.md](./chapter-03-first-chain) 里的 `## 分模块讲解`
+- 如果你不确定最小示例真正想表达什么，回看 [chapter-03-first-chain.md](./chapter-03-first-chain) 里的 `## 最小示例说明`
+- 如果你做不出实践题，先回看 [chapter-03-first-chain.md](./chapter-03-first-chain) 里的 `## 本章实践`
 
 ## 下一章预告
 

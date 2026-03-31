@@ -337,9 +337,9 @@ RAG 调试应该看链路，不该只看最终答案。
 
 ## 卡住时先回看这里
 
-- 如果你不知道该从哪里排查，回看 [chapter-06-rag-optimization.md](/chapters/chapter-06-rag-optimization) 里的 `## 优化的四个方向`
-- 如果你想直接调模型却说不清问题来源，回看 [chapter-06-rag-optimization.md](/chapters/chapter-06-rag-optimization) 里的 `## 本章实践`
-- 如果你对“只根据资料作答”的约束写不出来，回看 [chapter-06-rag-optimization.md](/chapters/chapter-06-rag-optimization) 里的 `## 生成优化怎么做`
+- 如果你不知道该从哪里排查，回看 [chapter-06-rag-optimization.md](./chapter-06-rag-optimization) 里的 `## 优化的四个方向`
+- 如果你想直接调模型却说不清问题来源，回看 [chapter-06-rag-optimization.md](./chapter-06-rag-optimization) 里的 `## 本章实践`
+- 如果你对“只根据资料作答”的约束写不出来，回看 [chapter-06-rag-optimization.md](./chapter-06-rag-optimization) 里的 `## 生成优化怎么做`
 
 ## 下一章预告
 

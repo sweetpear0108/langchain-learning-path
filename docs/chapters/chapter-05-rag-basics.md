@@ -336,9 +336,9 @@ RAG 不是记忆增强，而是检索增强。
 
 ## 卡住时先回看这里
 
-- 如果你还在把 RAG 理解成“扩大模型记忆”，回看 [chapter-05-rag-basics.md](/chapters/chapter-05-rag-basics) 里的 `## 为什么需要 RAG`
-- 如果你分不清各个组件的作用，回看 [chapter-05-rag-basics.md](/chapters/chapter-05-rag-basics) 里的 `## 核心概念`
-- 如果你的最小实验一直答偏，先回看 [chapter-05-rag-basics.md](/chapters/chapter-05-rag-basics) 里的 `## 常见坑`
+- 如果你还在把 RAG 理解成“扩大模型记忆”，回看 [chapter-05-rag-basics.md](./chapter-05-rag-basics) 里的 `## 为什么需要 RAG`
+- 如果你分不清各个组件的作用，回看 [chapter-05-rag-basics.md](./chapter-05-rag-basics) 里的 `## 核心概念`
+- 如果你的最小实验一直答偏，先回看 [chapter-05-rag-basics.md](./chapter-05-rag-basics) 里的 `## 常见坑`
 
 ## 下一章预告
 

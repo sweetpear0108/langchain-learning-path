@@ -249,9 +249,9 @@ LangGraph 的核心价值不是“让模型更聪明”，而是“让复杂 AI 
 
 ## 卡住时先回看这里
 
-- 如果你把所有逻辑都塞到一个节点里，回看 [chapter-08-langgraph-workflows.md](/chapters/chapter-08-langgraph-workflows) 里的 `## 分模块讲解`
-- 如果你不知道状态最少该放什么，回看 [chapter-08-langgraph-workflows.md](/chapters/chapter-08-langgraph-workflows) 里的 `## 本章实践`
-- 如果你分不清“图结构”和“普通链”的边界，回看 [chapter-08-langgraph-workflows.md](/chapters/chapter-08-langgraph-workflows) 里的 `## 最小示例说明`
+- 如果你把所有逻辑都塞到一个节点里，回看 [chapter-08-langgraph-workflows.md](./chapter-08-langgraph-workflows) 里的 `## 分模块讲解`
+- 如果你不知道状态最少该放什么，回看 [chapter-08-langgraph-workflows.md](./chapter-08-langgraph-workflows) 里的 `## 本章实践`
+- 如果你分不清“图结构”和“普通链”的边界，回看 [chapter-08-langgraph-workflows.md](./chapter-08-langgraph-workflows) 里的 `## 最小示例说明`
 
 ## 下一章预告
 

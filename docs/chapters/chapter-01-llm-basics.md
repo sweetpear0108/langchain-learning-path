@@ -295,9 +295,9 @@ if __name__ == "__main__":
 
 ## 卡住时先回看这里
 
-- 如果你分不清“模型调用”和“应用开发”，回看 [chapter-01-llm-basics.md](/chapters/chapter-01-llm-basics) 里的 `## 1.1 什么是 LLM 应用`
-- 如果你不确定 prompt 到底在控制什么，回看 [chapter-01-llm-basics.md](/chapters/chapter-01-llm-basics) 里的 `## 1.2 核心概念`
-- 如果你不知道主项目为什么现在还这么简单，回看 [chapter-01-llm-basics.md](/chapters/chapter-01-llm-basics) 里的 `## 1.6 AI 学习助手 的第一步`
+- 如果你分不清“模型调用”和“应用开发”，回看 [chapter-01-llm-basics.md](./chapter-01-llm-basics) 里的 `## 1.1 什么是 LLM 应用`
+- 如果你不确定 prompt 到底在控制什么，回看 [chapter-01-llm-basics.md](./chapter-01-llm-basics) 里的 `## 1.2 核心概念`
+- 如果你不知道主项目为什么现在还这么简单，回看 [chapter-01-llm-basics.md](./chapter-01-llm-basics) 里的 `## 1.6 AI 学习助手 的第一步`
 
 ## 下一章预告
 

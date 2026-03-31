@@ -294,9 +294,9 @@ prompt = PromptTemplate.from_template(template)
 
 ## 卡住时先回看这里
 
-- 如果你写的 Prompt 总是一大段散文，回看 [chapter-04-prompt-engineering.md](/chapters/chapter-04-prompt-engineering) 里的 `## 核心概念`
-- 如果你不确定实践目标到底是什么，回看 [chapter-04-prompt-engineering.md](/chapters/chapter-04-prompt-engineering) 里的 `## 本章实践`
-- 如果你只顾自然语言流畅没有考虑结构化输出，回看 [chapter-04-prompt-engineering.md](/chapters/chapter-04-prompt-engineering) 里的 `## 最小示例说明`
+- 如果你写的 Prompt 总是一大段散文，回看 [chapter-04-prompt-engineering.md](./chapter-04-prompt-engineering) 里的 `## 核心概念`
+- 如果你不确定实践目标到底是什么，回看 [chapter-04-prompt-engineering.md](./chapter-04-prompt-engineering) 里的 `## 本章实践`
+- 如果你只顾自然语言流畅没有考虑结构化输出，回看 [chapter-04-prompt-engineering.md](./chapter-04-prompt-engineering) 里的 `## 最小示例说明`
 
 ## 下一章预告
 
