@@ -3,52 +3,72 @@ layout: home
 
 hero:
   name: LangChain Learning Path
-  text: 用一个主项目，把 LangChain 从基础一路学到可部署
-  tagline: 面向中文开发者的章节化学习站。你不只是看概念，而是沿着 AI 学习助手这条主线，逐章完成 Prompt、链、RAG、Agent、LangGraph 和部署。
+  text: 一条主线学会 LangChain、RAG、Agent 和 LangGraph
+  tagline: 围绕 AI 学习助手，把学习顺序、章节内容、示例代码和部署边界放在同一条线上，先看主线，再决定进入哪一页。
   actions:
     - theme: brand
       text: 从新手 Setup 进入
       link: /guide/setup
     - theme: alt
-      text: 直接看章节
+      text: 查看章节目录
       link: /chapters/
     - theme: alt
-      text: 查看路线图
+      text: 查看学习路线图
       link: /guide/roadmap
-
-features:
-  - title: 一条稳定主线
-    details: 不是零散知识点堆叠，而是围绕 AI 学习助手逐步升级，始终知道自己在做什么。
-  - title: 每章都有落点
-    details: 每一章都包含目标、概念、最小示例、常见坑、练习题和下一步。
-  - title: 先做出来，再学抽象
-    details: 整个项目坚持先跑通最小实现，再理解为什么需要 LangChain、RAG、Agent 和 LangGraph。
 ---
 
-<div class="section-callout">
-  <strong>适合谁：</strong>
-  已有 Python 基础，想系统学 LangChain；不想再靠零散博客拼知识；希望做出一个可以公开展示、部署和持续迭代的 AI 应用。
+<div class="home-poster">
+  <div class="home-poster-copy">
+    <p class="home-kicker">首页总览</p>
+    <h2>把学习入口、章节主线和项目边界压成一张清晰的路线图。</h2>
+    <p class="home-lead">
+      这里不是卡片集合式导航，而是一个先判断方向、再进入内容的扁平首页：先知道学什么，再知道为什么学，最后才进入具体页面。
+    </p>
+    <div class="home-facts">
+      <div>
+        <span>学习入口</span>
+        <strong>新手 Setup / 快速开始 / 路线图</strong>
+      </div>
+      <div>
+        <span>章节主线</span>
+        <strong>基础层 / 应用层 / 编排层 / 工程层</strong>
+      </div>
+      <div>
+        <span>项目边界</span>
+        <strong>围绕 AI 学习助手逐章演进</strong>
+      </div>
+    </div>
+  </div>
+  <aside class="home-poster-board">
+    <p class="home-board-label">当前站点结构</p>
+    <ul>
+      <li><strong>首页</strong> 先回答这是什么、从哪里开始。</li>
+      <li><strong>章节目录</strong> 按 10 章递进建立能力。</li>
+      <li><strong>主项目</strong> 用同一个 AI 学习助手串起所有章节。</li>
+      <li><strong>支持页</strong> 提供 FAQ、术语表和排查入口。</li>
+    </ul>
+  </aside>
 </div>
 
-## 快速导航
+## 直接进入
 
 <p class="nav-intro">
-  顶栏已经按「开始学习 / 课程与项目 / 支持与参考」收敛。第一次进入站点时，可以先从下面的入口区判断自己现在最需要去哪一类页面。
+  顶部导航只保留四个明确入口，首页下面再把它们展开成一张平面的信息地图。你可以先按当前状态选择入口，而不是在多个相似卡片之间反复比较。
 </p>
 
 <div class="nav-overview">
   <section class="nav-panel">
     <span class="nav-card-kicker">Start Here</span>
     <h3>开始学习</h3>
-    <p>适合第一次进入仓库的读者，先完成环境准备，再建立阅读顺序和学习节奏。</p>
+    <p>先把环境、阅读顺序和基础节奏理顺，再进入正式章节。</p>
     <div class="nav-link-list">
       <a class="nav-link-item" href="./guide/setup">
         <strong>新手 Setup</strong>
-        <span>先把文档站和第一个示例跑起来。</span>
+        <span>先完成最小可运行环境与站点浏览。</span>
       </a>
       <a class="nav-link-item" href="./guide/getting-started">
         <strong>快速开始</strong>
-        <span>理解这套学习站怎么读、先看什么。</span>
+        <span>快速理解这套学习站的阅读方式。</span>
       </a>
       <a class="nav-link-item" href="./guide/study-plan">
         <strong>学习计划</strong>
@@ -59,7 +79,7 @@ features:
   <section class="nav-panel">
     <span class="nav-card-kicker">Core Paths</span>
     <h3>课程与项目</h3>
-    <p>适合已经开始系统学习的人，直接进入章节、主项目和示例代码三条主线。</p>
+    <p>章节、主项目和示例代码是同一条主线上的不同视角。</p>
     <div class="nav-link-list">
       <a class="nav-link-item" href="./chapters/">
         <strong>章节目录</strong>
@@ -82,7 +102,7 @@ features:
   <section class="nav-panel">
     <span class="nav-card-kicker">Support</span>
     <h3>支持与参考</h3>
-    <p>适合查概念、解问题和补背景，减少在章节之间反复跳转的成本。</p>
+    <p>概念、术语和问题排查集中放在这里，减少在章节之间反复跳转的成本。</p>
     <div class="nav-link-list">
       <a class="nav-link-item" href="./guide/roadmap">
         <strong>学习路线图</strong>
@@ -104,51 +124,61 @@ features:
   </section>
 </div>
 
-## 学习路径一览
+## 学习路径
 
-<div class="path-grid">
-  <div class="path-card">
-    <h3>基础层</h3>
-    <p>先建立 LLM 应用视角，再理解 Prompt、Model、Parser、Runnable 和 LCEL 这些最核心抽象。</p>
+<div class="path-strip">
+  <div class="path-step">
+    <span class="path-step-index">01</span>
+    <div>
+      <h3>基础层</h3>
+      <p>先建立 LLM 应用视角，再理解 Prompt、Model、Parser、Runnable 和 LCEL。</p>
+    </div>
   </div>
-  <div class="path-card">
-    <h3>应用层</h3>
-    <p>从第一个链式应用开始，进入 Prompt 工程、RAG 和检索优化，把 AI 学习助手真正做起来。</p>
+  <div class="path-step">
+    <span class="path-step-index">02</span>
+    <div>
+      <h3>应用层</h3>
+      <p>从第一个链式应用开始，进入 Prompt 工程、RAG 和检索优化。</p>
+    </div>
   </div>
-  <div class="path-card">
-    <h3>编排层</h3>
-    <p>当流程开始变复杂，再引入 Tools、Agent 和 LangGraph，让系统从能跑升级到可控。</p>
+  <div class="path-step">
+    <span class="path-step-index">03</span>
+    <div>
+      <h3>编排层</h3>
+      <p>当流程变复杂时，引入 Tools、Agent 和 LangGraph，让系统可控。</p>
+    </div>
   </div>
-  <div class="path-card">
-    <h3>工程层</h3>
-    <p>最后补评估、观测、调试和公开部署，把项目打磨成可以分享给别人的作品。</p>
+  <div class="path-step">
+    <span class="path-step-index">04</span>
+    <div>
+      <h3>工程层</h3>
+      <p>补上评估、观测、调试和公开部署，把项目打磨成可分享作品。</p>
+    </div>
   </div>
 </div>
 
-## 你会沿着什么项目学习
+## 主项目演进
 
-整个站点围绕一个持续演进的主项目：`AI 学习助手`。
+<p class="nav-intro">
+  整个站点围绕一个持续演进的主项目：<code>AI 学习助手</code>。每一章只推进一个明确能力，避免每章换一个无关 Demo。
+</p>
 
-<div class="timeline-list">
-  <div class="timeline-item">
+<div class="project-line">
+  <div class="project-stage">
     <strong>V1</strong>
-    从最小链式应用开始，只做主题摘要和学习顺序建议。
+    <span>最小链式应用，只做主题摘要和学习顺序建议。</span>
   </div>
-  <div class="timeline-item">
+  <div class="project-stage">
     <strong>V2</strong>
-    通过 Prompt 工程和结构化输出，让结果更稳定、更适合渲染。
+    <span>通过 Prompt 工程和结构化输出，让结果更稳定。</span>
   </div>
-  <div class="timeline-item">
+  <div class="project-stage">
     <strong>V3</strong>
-    接入课程资料，升级为可回答资料内容的基础 RAG 学习助手。
+    <span>接入课程资料，升级为基础 RAG 学习助手。</span>
   </div>
-  <div class="timeline-item">
+  <div class="project-stage">
     <strong>V4</strong>
-    引入 Tools、Agent 和 LangGraph，把系统组织成更完整的工作流。
-  </div>
-  <div class="timeline-item">
-    <strong>最终形态</strong>
-    文档站 + 示例代码 + 可扩展后端，一套能公开展示的 LangChain 学习项目。
+    <span>引入 Tools、Agent 和 LangGraph，把系统组织成完整工作流。</span>
   </div>
 </div>
 
@@ -157,11 +187,11 @@ features:
 <div class="quick-links">
   <a href="./guide/setup">新手 Setup</a>
   <a href="./guide/getting-started">快速开始</a>
-  <a href="./compare/">方法对比页</a>
   <a href="./guide/roadmap">学习路线图</a>
-  <a href="./faq/glossary">术语表</a>
   <a href="./chapters/">章节目录</a>
   <a href="./project/">主项目演进</a>
+  <a href="./examples/">示例代码</a>
+  <a href="./faq/glossary">术语表</a>
   <a href="./faq/">FAQ</a>
 </div>
 
