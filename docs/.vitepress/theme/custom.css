@@ -55,7 +55,7 @@
 html,
 body,
 .Layout {
-  background: var(--flat-muted);
+  background: #f7f9fc;
   color: var(--flat-ink);
   font-family: "Avenir Next", "IBM Plex Sans", "PingFang SC", "Noto Sans SC", sans-serif;
 }
@@ -94,21 +94,22 @@ body,
 }
 
 .VPNavBar {
-  background: transparent;
+  background: var(--flat-blue);
   border-bottom: 0;
 }
 
 .VPNavBar .wrapper {
-  padding: 10px 24px 8px;
+  padding: 0;
 }
 
 .VPNavBar .container {
-  min-height: 56px;
-  padding: 0 8px 0 2px;
+  min-height: 48px;
+  max-width: none;
+  padding: 0 22px;
   border: 0;
-  border-bottom: 1px solid #dde6ee;
+  border-bottom: 0;
   border-radius: 0;
-  background: #ffffff;
+  background: var(--flat-blue);
 }
 
 .VPNavBar .title {
@@ -118,7 +119,7 @@ body,
 .VPNavBarTitle .title {
   gap: 10px;
   font-weight: 800;
-  color: var(--flat-ink);
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -129,10 +130,11 @@ body,
   border: 0;
   border-radius: 0;
   background: transparent;
+  filter: brightness(0) invert(1);
 }
 
 .VPNavBarSearch {
-  margin-right: 8px;
+  margin-right: 12px;
 }
 
 .VPNavBarTitle .title,
@@ -141,46 +143,6 @@ body,
 .vp-doc :where(h1, h2, h3, h4, h5, h6) {
   font-family: "Avenir Next", "IBM Plex Sans", "PingFang SC", "Noto Sans SC", sans-serif;
   letter-spacing: 0.01em;
-}
-
-.VPHero {
-  padding-top: 18px;
-  padding-bottom: 18px;
-}
-
-.VPHero .container {
-  border: 0;
-  border-radius: 0;
-  background: transparent;
-  padding: 8px 0 0;
-}
-
-.VPHero .main {
-  max-width: 780px;
-}
-
-.VPHero .name {
-  font-size: 0.78rem;
-  line-height: 1.2;
-  font-weight: 800;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--flat-ink-soft);
-}
-
-.VPHero .text {
-  max-width: none;
-  font-size: clamp(1.5rem, 2.3vw, 2.1rem);
-  line-height: 1.18;
-  letter-spacing: -0.02em;
-  color: var(--flat-ink);
-}
-
-.VPHero .tagline {
-  max-width: 34rem;
-  color: var(--flat-ink-soft);
-  font-size: 0.95rem;
-  line-height: 1.6;
 }
 
 .VPNavBarMenuLink,
@@ -205,7 +167,7 @@ body,
 .VPNavBarMenuGroup .button {
   min-height: 36px;
   padding-inline: 12px;
-  color: var(--flat-ink-soft);
+  color: rgba(255, 255, 255, 0.88);
   background: transparent;
   position: relative;
 }
@@ -217,21 +179,21 @@ body,
 .VPSidebarItem .link:hover,
 .VPSidebarItem .item:hover {
   background: transparent;
-  color: var(--flat-blue-dark);
+  color: #ffffff;
 }
 
 .VPNavBarMenuLink.active,
 .VPNavBarMenuGroup.active .button,
 .VPNavScreenMenuLink.active {
   background: transparent;
-  color: var(--flat-ink);
+  color: #ffffff;
 }
 
 .VPNavBarMenuLink.active:hover,
 .VPNavBarMenuGroup.active .button:hover,
 .VPNavScreenMenuLink.active:hover {
   background: transparent;
-  color: var(--flat-ink);
+  color: #ffffff;
 }
 
 .VPNavBarMenuLink::after,
@@ -248,12 +210,12 @@ body,
 
 .VPNavBarMenuLink.active::after,
 .VPNavBarMenuGroup.active .button::after {
-  background: var(--flat-ink);
+  background: #ffffff;
 }
 
 .VPNavBarMenuLink:hover::after,
 .VPNavBarMenuGroup .button:hover::after {
-  background: var(--flat-line);
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .VPFlyout {
@@ -264,15 +226,15 @@ body,
 
 .DocSearch-Button {
   min-height: 34px;
-  min-width: auto;
-  padding: 0 10px 0 6px;
+  min-width: 220px;
+  padding: 0 12px 0 10px;
   border: 0;
-  border-radius: 0;
-  background: transparent;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.16);
 }
 
 .DocSearch-Button:hover {
-  background: transparent;
+  background: rgba(0, 0, 0, 0.22);
   border-color: transparent;
 }
 
@@ -281,7 +243,7 @@ body,
 }
 
 .DocSearch-Button-Placeholder {
-  color: var(--flat-ink-soft);
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .DocSearch-Button-Placeholder,
@@ -299,7 +261,7 @@ body,
   padding: 0;
   border: 0;
   background: transparent;
-  color: var(--flat-ink-soft);
+  color: rgba(255, 255, 255, 0.72);
 }
 
 .DocSearch-Button-Keys .DocSearch-Button-Key:first-child {
@@ -307,7 +269,7 @@ body,
 }
 
 .DocSearch-Search-Icon {
-  color: var(--flat-ink-soft);
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .DocSearch-Modal,
@@ -335,7 +297,7 @@ body,
 
 .VPSidebar {
   background: #ffffff;
-  border-right: 1px solid var(--flat-line);
+  border-right: 1px solid #e5ebf1;
 }
 
 .VPSidebarItem.level-0 > .item > .text,
@@ -344,10 +306,14 @@ body,
   color: var(--flat-ink);
 }
 
+.VPSidebarItem .link {
+  font-size: 0.95rem;
+}
+
 .VPDocAsideOutline .content {
-  border: 1px solid var(--flat-line);
-  border-radius: 8px;
-  background: #ffffff;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
 }
 
 .VPDocAsideOutline .content a {
@@ -368,13 +334,15 @@ body,
 
 .vp-doc :where(h1) {
   margin-top: 0;
-  padding-bottom: 14px;
-  border-bottom: 3px solid var(--flat-blue);
+  padding-bottom: 0;
+  border-bottom: 0;
+  font-size: clamp(2rem, 3.2vw, 2.8rem);
 }
 
 .vp-doc :where(h2) {
-  padding-bottom: 10px;
+  padding-bottom: 8px;
   border-bottom: 1px solid var(--flat-line);
+  font-size: 1.8rem;
 }
 
 .vp-doc :where(a) {
@@ -534,21 +502,176 @@ body,
   margin-top: 0;
 }
 
-.VPHome .vp-doc a[class] {
+.vp-doc a[class] {
   color: inherit;
   text-decoration: none;
 }
 
-.VPHome .vp-doc a[class]:hover,
-.VPHome .vp-doc a[class]:focus-visible {
+.vp-doc a[class]:hover,
+.vp-doc a[class]:focus-visible {
   color: inherit;
 }
 
-.VPHome .vp-doc h2,
-.VPHome .vp-doc h3,
-.VPHome .vp-doc p {
+.landing-intro {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+  margin: 0 0 2rem;
+  padding: 1rem 0 0.5rem;
+}
+
+.landing-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+  border-radius: 16px;
+  background: var(--flat-blue);
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.landing-copy h1 {
   margin: 0;
-  border: 0;
+}
+
+.landing-copy p {
+  margin: 0.65rem 0 0;
+  color: var(--flat-ink-soft);
+}
+
+.landing-kicker {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--flat-blue);
+}
+
+.entry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 1rem;
+}
+
+.entry-card,
+.path-item,
+.project-item {
+  display: block;
+  border: 1px solid var(--flat-line);
+  border-radius: 8px;
+  background: #ffffff;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.entry-card {
+  padding: 1rem 1rem 1.05rem;
+}
+
+.entry-card:hover,
+.path-item:hover,
+.project-item:hover {
+  background: var(--flat-muted);
+}
+
+.entry-card-kicker {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--flat-blue);
+}
+
+.entry-card strong,
+.path-item strong,
+.project-item strong {
+  display: block;
+  margin-top: 0.55rem;
+  font-size: 1.1rem;
+  line-height: 1.35;
+  color: var(--flat-ink);
+}
+
+.entry-card span:last-child,
+.path-item span:last-child,
+.project-item span:last-child {
+  display: block;
+  margin-top: 0.35rem;
+  color: var(--flat-ink-soft);
+  line-height: 1.6;
+}
+
+.doc-pair-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 18px;
+  margin-top: 1rem;
+}
+
+.path-item {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+  min-height: 96px;
+  padding: 1rem;
+}
+
+.path-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.path-badge-blue {
+  background: var(--flat-blue);
+}
+
+.path-badge-cyan {
+  background: var(--flat-cyan);
+}
+
+.path-badge-orange {
+  background: var(--flat-orange);
+}
+
+.path-badge-ink {
+  background: var(--flat-ink);
+}
+
+.project-item {
+  min-height: 96px;
+  padding: 1rem;
+  border-left-width: 4px;
+}
+
+.project-item-blue {
+  border-left-color: var(--flat-blue);
+}
+
+.project-item-cyan {
+  border-left-color: var(--flat-cyan);
+}
+
+.project-item-orange {
+  border-left-color: var(--flat-orange);
+}
+
+.project-item-ink {
+  border-left-color: var(--flat-ink);
 }
 
 :where(
@@ -569,12 +692,16 @@ body,
 }
 
 @media (max-width: 960px) {
-  .VPHero .container {
-    padding: 24px;
+  .VPNavBar .container {
+    padding: 0 12px;
   }
 
-  .VPHero .text {
-    max-width: none;
+  .DocSearch-Button {
+    min-width: 160px;
+  }
+
+  .doc-pair-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -583,13 +710,18 @@ body,
     font-size: 15px;
   }
 
-  .VPHero {
-    padding-top: 20px;
-    padding-bottom: 20px;
+  .landing-intro {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 
-  .VPHero .container {
-    padding: 18px;
-    border-radius: 8px;
+  .landing-mark {
+    width: 72px;
+    height: 72px;
+    font-size: 1.5rem;
+  }
+
+  .VPNavBar .wrapper {
+    padding: 0;
   }
 }

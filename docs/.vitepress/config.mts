@@ -46,6 +46,17 @@ export default defineConfig({
       }
     ],
     sidebar: {
+      "/": [
+        {
+          text: "LangChain Learning Path",
+          items: [
+            { text: "前言", link: "/" },
+            { text: "从哪里开始", link: "/#从哪里开始" },
+            { text: "学习主线", link: "/#学习主线" },
+            { text: "继续阅读", link: "/#继续阅读" }
+          ]
+        }
+      ],
       "/guide/": [
         {
           text: "指南",
