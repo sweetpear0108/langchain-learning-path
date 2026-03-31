@@ -6,6 +6,7 @@ const base = process.env.GITHUB_ACTIONS ? `/${repoName}/` : "/";
 const siteSidebar = [
   {
     text: "开始学习",
+    collapsed: true,
     items: [
       { text: "前言", link: "/" },
       { text: "新手 Setup", link: "/guide/setup" },
@@ -16,6 +17,7 @@ const siteSidebar = [
   },
   {
     text: "章节主线",
+    collapsed: true,
     items: [
       { text: "章节目录", link: "/chapters/" },
       { text: "第 1 章：LLM 应用基础", link: "/chapters/chapter-01-llm-basics" },
@@ -32,6 +34,7 @@ const siteSidebar = [
   },
   {
     text: "项目与示例",
+    collapsed: true,
     items: [
       { text: "主项目", link: "/project/" },
       { text: "示例代码", link: "/examples/" }
@@ -39,6 +42,7 @@ const siteSidebar = [
   },
   {
     text: "方法对比",
+    collapsed: true,
     items: [
       { text: "对比页首页", link: "/compare/" },
       { text: "LangChain vs LlamaIndex", link: "/compare/langchain-vs-llamaindex" },
@@ -49,6 +53,7 @@ const siteSidebar = [
   },
   {
     text: "帮助",
+    collapsed: true,
     items: [
       { text: "FAQ", link: "/faq/" },
       { text: "术语表", link: "/faq/glossary" },
