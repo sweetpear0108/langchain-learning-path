@@ -14,15 +14,35 @@ export default defineConfig({
     logo: "LC",
     nav: [
       { text: "首页", link: "/" },
-      { text: "快速开始", link: "/guide/getting-started" },
-      { text: "学习计划", link: "/guide/study-plan" },
-      { text: "对比页", link: "/compare/" },
-      { text: "路线图", link: "/guide/roadmap" },
-      { text: "术语表", link: "/faq/glossary" },
-      { text: "章节", link: "/chapters/" },
-      { text: "示例代码", link: "/examples/" },
-      { text: "主项目", link: "/project/" },
-      { text: "FAQ", link: "/faq/" }
+      {
+        text: "开始学习",
+        activeMatch: "^/guide/",
+        items: [
+          { text: "新手 Setup", link: "/guide/setup" },
+          { text: "快速开始", link: "/guide/getting-started" },
+          { text: "学习计划", link: "/guide/study-plan" },
+          { text: "路线图", link: "/guide/roadmap" }
+        ]
+      },
+      {
+        text: "课程与项目",
+        activeMatch: "^/(chapters|examples|project|compare)/",
+        items: [
+          { text: "章节目录", link: "/chapters/" },
+          { text: "主项目", link: "/project/" },
+          { text: "示例代码", link: "/examples/" },
+          { text: "方法对比", link: "/compare/" }
+        ]
+      },
+      {
+        text: "支持与参考",
+        activeMatch: "^/faq/",
+        items: [
+          { text: "FAQ", link: "/faq/" },
+          { text: "故障排查", link: "/faq/troubleshooting" },
+          { text: "术语表", link: "/faq/glossary" }
+        ]
+      }
     ],
     sidebar: {
       "/guide/": [

@@ -30,6 +30,80 @@ features:
   已有 Python 基础，想系统学 LangChain；不想再靠零散博客拼知识；希望做出一个可以公开展示、部署和持续迭代的 AI 应用。
 </div>
 
+## 快速导航
+
+<p class="nav-intro">
+  顶栏已经按「开始学习 / 课程与项目 / 支持与参考」收敛。第一次进入站点时，可以先从下面的入口区判断自己现在最需要去哪一类页面。
+</p>
+
+<div class="nav-overview">
+  <section class="nav-panel">
+    <span class="nav-card-kicker">Start Here</span>
+    <h3>开始学习</h3>
+    <p>适合第一次进入仓库的读者，先完成环境准备，再建立阅读顺序和学习节奏。</p>
+    <div class="nav-link-list">
+      <a class="nav-link-item" href="/guide/setup">
+        <strong>新手 Setup</strong>
+        <span>先把文档站和第一个示例跑起来。</span>
+      </a>
+      <a class="nav-link-item" href="/guide/getting-started">
+        <strong>快速开始</strong>
+        <span>理解这套学习站怎么读、先看什么。</span>
+      </a>
+      <a class="nav-link-item" href="/guide/study-plan">
+        <strong>学习计划</strong>
+        <span>按 7 天、14 天、30 天节奏安排学习。</span>
+      </a>
+    </div>
+  </section>
+  <section class="nav-panel">
+    <span class="nav-card-kicker">Core Paths</span>
+    <h3>课程与项目</h3>
+    <p>适合已经开始系统学习的人，直接进入章节、主项目和示例代码三条主线。</p>
+    <div class="nav-link-list">
+      <a class="nav-link-item" href="/chapters/">
+        <strong>章节目录</strong>
+        <span>从第 1 章到第 10 章按顺序推进。</span>
+      </a>
+      <a class="nav-link-item" href="/project/">
+        <strong>主项目</strong>
+        <span>跟着 AI 学习助手的版本演进理解能力落点。</span>
+      </a>
+      <a class="nav-link-item" href="/examples/">
+        <strong>示例代码</strong>
+        <span>查看每章对应的最小可运行示例。</span>
+      </a>
+      <a class="nav-link-item" href="/compare/">
+        <strong>方法对比</strong>
+        <span>建立 Chain、Agent、RAG、LangGraph 的选择判断。</span>
+      </a>
+    </div>
+  </section>
+  <section class="nav-panel">
+    <span class="nav-card-kicker">Support</span>
+    <h3>支持与参考</h3>
+    <p>适合查概念、解问题和补背景，减少在章节之间反复跳转的成本。</p>
+    <div class="nav-link-list">
+      <a class="nav-link-item" href="/guide/roadmap">
+        <strong>学习路线图</strong>
+        <span>先看整体教学路径和阶段目标。</span>
+      </a>
+      <a class="nav-link-item" href="/faq/glossary">
+        <strong>术语表</strong>
+        <span>快速回查 Runnable、Retriever、Trace 等高频术语。</span>
+      </a>
+      <a class="nav-link-item" href="/faq/">
+        <strong>FAQ</strong>
+        <span>集中查看常见问题和排查入口。</span>
+      </a>
+      <a class="nav-link-item" href="/faq/troubleshooting">
+        <strong>故障排查</strong>
+        <span>遇到环境或构建问题时，直接查看定位建议。</span>
+      </a>
+    </div>
+  </section>
+</div>
+
 ## 学习路径一览
 
 <div class="path-grid">
@@ -78,7 +152,7 @@ features:
   </div>
 </div>
 
-## 现在从哪里开始
+## 推荐入口
 
 <div class="quick-links">
   <a href="/guide/setup">新手 Setup</a>
@@ -91,17 +165,17 @@ features:
   <a href="/faq/">FAQ</a>
 </div>
 
-如果你是第一次打开这个项目，建议先看：
+第一次进入本项目，建议先看：
 
 1. [新手 Setup](./guide/setup.md)
 2. [快速开始](./guide/getting-started.md)
 3. [学习路线图](./guide/roadmap.md)
 
-如果你想理解这套项目为什么这样设计，再看：
+如果想理解这套项目为什么这样设计，再看：
 
 - [完整设计方案](./DESIGN.md)
 - [完整课程大纲](./COURSE_OUTLINE.md)
 
-如果你已经开始做项目，想先建立“什么时候该选哪种方法”的判断，再看：
+如果已经开始做项目，想先建立“什么时候该选哪种方法”的判断，再看：
 
 - [方法对比页](./compare/README.md)
