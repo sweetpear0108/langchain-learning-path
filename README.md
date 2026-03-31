@@ -2,79 +2,24 @@
 
 这是一个面向中文开发者的 LangChain 章节化学习项目。
 
-## 推荐环境与版本基线
+仓库以一个持续演进的主项目 `AI 学习助手` 为主线，把 LangChain 的核心能力拆成循序渐进的章节内容，而不是把概念、API 和示例零散堆放。
 
-为避免跟着上游版本快速漂移，本仓库当前推荐使用以下本地环境：
+## 项目定位
 
-- `Python 3.11`
-- `Node.js 20 LTS`
-- `npm` 使用与 `Node.js 20 LTS` 配套的默认版本即可
+这个项目同时承担三件事：
 
-当前教程涉及的 Python 依赖边界以仓库内的 `requirements.txt` 为准，推荐按下面的范围理解和安装：
+- 提供一条面向中文开发者的 LangChain 学习路径
+- 用章节化内容解释从基础抽象到工程实践的过渡
+- 通过同一个主项目把 Prompt、Chain、RAG、Agent、LangGraph 等主题串起来
 
-- `langchain-core>=0.3,<1`
-- `langchain-text-splitters>=0.3,<1`
-
-补充说明：
-
-- 仓库根目录现在提供统一 Python 入口：`requirements.txt`
-- `chapter-03` 到 `chapter-06` 的 `requirements.txt` 继续保留，但它们通过根级约束文件共享同一套版本边界，避免章节之间各自漂移
-- `backend/requirements.txt` 也转为复用根级依赖入口，后续 Phase 2 只需要在该文件追加后端专属依赖
-- 暂时不新增 `requirements-dev.txt`：当前仓库还没有统一的 Python lint/test 工具链，现在强行拆一份开发依赖只会制造第二套入口
-- 文档站前端依赖以仓库提交里的 `package-lock.json` 为准
-- 教程内容始终以仓库当前提交中锁定的依赖声明为准，而不是以上游最新版本为准
-
-如果你准备连续跑多个 LangChain 章节，建议在仓库根目录创建一个虚拟环境后直接安装：
-
-```bash
-python -m venv .venv
-source .venv/bin/activate
-python -m pip install -r requirements.txt
-```
-
-如果你只想跑单章，继续在章节目录执行 `pip install -r requirements.txt` 也可以，章节文件会自动继承根级版本边界。
-
-如果你准备提交文档或示例改动，仓库也提供单独的开发依赖入口：
-
-```bash
-python -m pip install -r requirements-dev.txt
-npm install
-npm run lint
-```
-
-更具体的提交前检查约定见 `CONTRIBUTING.md`。
-
-## 统一环境变量约定
-
-为后续把教学示例逐步切换到真实模型调用，仓库现在统一预留一套环境变量命名。
-
-- 根目录提供统一模板：`.env.example`
-- 需要继续扩展为真实模型调用的章节目录也提供各自的 `.env.example`
-- 后续默认优先复用这些变量名，而不是按章节发散出不同命名
-
-当前约定的核心变量如下：
-
-- `MODEL_PROVIDER`：模型提供方标识，便于后续在相同代码结构里切换实现
-- `MODEL_NAME`：聊天模型名，统一作为主模型入口
-- `EMBEDDING_MODEL_NAME`：向量化或检索相关模型名，主要给 RAG 章节预留
-- `OPENAI_API_KEY`：兼容 OpenAI 风格接口的密钥变量名
-- `OPENAI_BASE_URL`：兼容 OpenAI 风格接口的可选基础地址
-- `LANGSMITH_API_KEY` / `LANGSMITH_TRACING`：给第 9 章及后续观测链路预留
-
-使用方式保持简单：
-
-```bash
-cp .env.example .env
-```
-
-如果你在某个章节里单独试验真实模型，也可以复制该章节目录下的 `.env.example`。当前多数示例仍然使用本地占位实现，不会主动读取这些变量；它们的作用是先把目录规范和命名规范固定下来，避免后续接入真实模型时重新改一轮结构。
+当前重点不是提供在线产品，而是先把教程结构、内容框架和教学示例稳定下来。
 
 ## 当前发布基线
 
 当前仓库冻结为第一个可发布的 `Phase 1` 基线。
 
 - 当前阶段：`Phase 1 / 静态教学站`
-- 当前目标：先把学习路径、章节内容、示例代码和 GitHub Pages 发布链路稳定下来
+- 当前目标：先把学习路径、章节内容和示例代码稳定下来
 - 当前状态：适合公开展示学习路线和仓库结构，还不包含在线运行的 LangChain 实验能力
 
 ### 这个基线已经包含什么
@@ -83,7 +28,6 @@ cp .env.example .env
 - 首页、路线图、章节目录和项目页入口
 - `chapter-01` 到 `chapter-10` 的章节文档草稿
 - 每章对应的最小示例目录与 `main.py`
-- GitHub Pages 部署工作流：`.github/workflows/deploy-pages.yml`
 
 ### 这个基线还不包含什么
 
@@ -102,58 +46,47 @@ cp .env.example .env
 - LangGraph 工作流
 - 评估、观测、调试与公开部署
 
-## 本地启动文档站
+## 学习路径
 
-```bash
-npm install
-npm run docs:dev
-```
+本项目按以下章节顺序展开：
 
-## 构建静态站
+- 第 1 章：LLM 应用基础
+- 第 2 章：LangChain 核心抽象
+- 第 3 章：第一个链式应用
+- 第 4 章：Prompt 工程与输出控制
+- 第 5 章：RAG 入门
+- 第 6 章：RAG 进阶优化
+- 第 7 章：Tools 与 Agent
+- 第 8 章：LangGraph 工作流
+- 第 9 章：评估、观测与调试
+- 第 10 章：综合实战与公开部署
 
-```bash
-npm run docs:build
-```
+## 当前边界
 
-## 启用 GitHub Pages
-
-仓库已经包含基于 GitHub Actions 的 Pages 部署工作流。
-
-1. 进入仓库 `Settings -> Pages`
-2. 在 `Build and deployment` 中选择 `GitHub Actions`
-3. 确认默认分支为 `main`
-4. 推送到 `main`，或在 Actions 页面手动触发 `Deploy VitePress Site`
-
-工作流会执行 `npm install` 和 `npm run docs:build`，然后把 `docs/.vitepress/dist` 发布到 GitHub Pages。
-
-## 当前阶段说明
-
-本仓库现在只承诺 `Phase 1` 范围：
-
-- 重点是章节化教学内容、主项目演进路线和本地可运行示例
-- 目标是让新读者先看懂“学什么、按什么顺序学、每章会得到什么”
-
-`Phase 2` 尚未开始，后续才会补：
+`Phase 2` 尚未开始。仓库当前仍以文档、图示和本地示例为主，后续才会补：
 
 - 真正可承载实验的外部 `FastAPI` / LangChain 运行时
 - 站内交互式实验页面
 - 更真实的线上演示、调试与观测链路
 
-当前为了让读者更容易理解边界，仓库已经补了一个最小后端占位成果：
+为了让边界更清楚，仓库已经补了一个最小后端占位成果：
 
 - `backend/app/main.py` 提供可启动的 `FastAPI` 骨架
 - `GET /health` 用于确认服务存活
 - `GET /demo` 用于说明未来 Phase 2 会往这里继续扩展
 
-如果你只是跟着当前教程学习，可以先把 `backend/` 理解为“已建立接口入口，但尚未承诺真实实验能力”。
+当前可以将 `backend/` 理解为“已建立接口入口，但尚未承诺真实实验能力”。
 
 ## 文档入口
 
-- [新手 Setup](./docs/guide/setup.md)
 - [文档首页](./docs/index.md)
+- [学习路线图](./docs/guide/roadmap.md)
+- [学习计划](./docs/guide/study-plan.md)
 - [完整设计方案](./docs/DESIGN.md)
 - [完整课程大纲](./docs/COURSE_OUTLINE.md)
 - [章节目录](./docs/chapters/README.md)
+- [术语表](./docs/faq/glossary.md)
+- [常见问题排查](./docs/faq/troubleshooting.md)
 
 ## 仓库结构
 
@@ -161,4 +94,4 @@ npm run docs:build
 - `examples/`：每章最小可运行代码
 - `backend/`：第二阶段在线实验后端
 - `shared/`：共享提示词、数据集和图示
-- `.github/workflows/`：自动化和 GitHub Pages 部署
+- `.github/workflows/`：自动化工作流
