@@ -105,7 +105,7 @@ body,
 .VPNavBar .container {
   min-height: 48px;
   max-width: none;
-  padding: 0 22px;
+  padding: 0 20px;
   border: 0;
   border-bottom: 0;
   border-radius: 0;
@@ -134,7 +134,8 @@ body,
 }
 
 .VPNavBarSearch {
-  margin-right: 12px;
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .VPNavBarTitle .title,
@@ -228,14 +229,14 @@ body,
   min-height: 34px;
   min-width: 220px;
   padding: 0 12px 0 10px;
-  border: 0;
+  border: 1px solid #4da3de;
   border-radius: 4px;
-  background: rgba(0, 0, 0, 0.16);
+  background: #2f86c4;
 }
 
 .DocSearch-Button:hover {
-  background: rgba(0, 0, 0, 0.22);
-  border-color: transparent;
+  background: #2a79b0;
+  border-color: #2a79b0;
 }
 
 .DocSearch-Button-Container {
@@ -261,7 +262,7 @@ body,
   padding: 0;
   border: 0;
   background: transparent;
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(255, 255, 255, 0.76);
 }
 
 .DocSearch-Button-Keys .DocSearch-Button-Key:first-child {
@@ -300,14 +301,48 @@ body,
   border-right: 1px solid #e5ebf1;
 }
 
+.VPSidebar .group + .group {
+  margin-top: 18px;
+}
+
+.VPSidebarItem.level-0 {
+  margin-top: 0;
+}
+
 .VPSidebarItem.level-0 > .item > .text,
 .VPSidebarItem.level-0 > .link > .text {
   font-weight: 700;
   color: var(--flat-ink);
 }
 
+.VPSidebarItem.level-0 > .item,
+.VPSidebarItem.level-0 > .link {
+  margin-bottom: 8px;
+}
+
+.VPSidebarItem .item {
+  padding: 0;
+}
+
 .VPSidebarItem .link {
   font-size: 0.95rem;
+  border-left: 2px solid transparent;
+  border-radius: 0;
+  padding: 6px 0 6px 12px;
+  color: var(--flat-ink-soft);
+}
+
+.VPSidebarItem .link:hover {
+  background: transparent;
+  border-left-color: #c7d3df;
+  color: var(--flat-ink);
+}
+
+.VPSidebarItem .link.active {
+  background: transparent;
+  border-left-color: var(--flat-blue);
+  color: var(--flat-blue-dark);
+  font-weight: 700;
 }
 
 .VPDocAsideOutline .content {
@@ -513,44 +548,14 @@ body,
 }
 
 .landing-intro {
-  display: grid;
-  grid-template-columns: 96px minmax(0, 1fr);
-  gap: 24px;
-  align-items: center;
-  margin: 0 0 2rem;
-  padding: 1rem 0 0.5rem;
+  margin: 0 0 1.5rem;
+  padding: 0.5rem 0 0;
 }
 
-.landing-mark {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 96px;
-  height: 96px;
-  border-radius: 16px;
-  background: var(--flat-blue);
-  color: #ffffff;
-  font-size: 2rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-}
-
-.landing-copy h1 {
+.landing-intro h1 {
   margin: 0;
-}
-
-.landing-copy p {
-  margin: 0.65rem 0 0;
-  color: var(--flat-ink-soft);
-}
-
-.landing-kicker {
-  margin: 0;
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--flat-blue);
+  font-size: clamp(2rem, 3.2vw, 2.8rem);
+  line-height: 1.1;
 }
 
 .entry-grid {
@@ -708,17 +713,6 @@ body,
 @media (max-width: 768px) {
   .vp-doc {
     font-size: 15px;
-  }
-
-  .landing-intro {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .landing-mark {
-    width: 72px;
-    height: 72px;
-    font-size: 1.5rem;
   }
 
   .VPNavBar .wrapper {

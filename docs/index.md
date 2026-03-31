@@ -4,12 +4,7 @@ title: 前言
 ---
 
 <div class="landing-intro">
-  <div class="landing-mark">LC</div>
-  <div class="landing-copy">
-    <p class="landing-kicker">LangChain Learning Path</p>
-    <h1>开始你的 LangChain 自学</h1>
-    <p>把环境搭建、章节主线、项目演进和方法选择放到一条连续路径里，先开始，再逐步深入。</p>
-  </div>
+  <h1>LangChain Learning Path</h1>
 </div>
 
 ## 从哪里开始
