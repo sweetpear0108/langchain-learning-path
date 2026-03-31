@@ -26,7 +26,7 @@ export default defineConfig({
         ]
       },
       {
-        text: "课程与项目",
+        text: "章节与项目",
         activeMatch: "^/(chapters|examples|project|compare)/",
         items: [
           { text: "章节目录", link: "/chapters/" },
@@ -36,7 +36,7 @@ export default defineConfig({
         ]
       },
       {
-        text: "支持与参考",
+        text: "支持",
         activeMatch: "^/faq/",
         items: [
           { text: "FAQ", link: "/faq/" },

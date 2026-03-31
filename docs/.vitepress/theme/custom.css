@@ -1,16 +1,16 @@
 :root {
   --flat-blue: #3498db;
-  --flat-blue-dark: #2980b9;
+  --flat-blue-dark: #2b7cb8;
   --flat-red: #e74c3c;
   --flat-green: #2ecc71;
   --flat-yellow: #f39c12;
   --flat-orange: #e67e22;
   --flat-cyan: #1abc9c;
   --flat-ink: #2c3e50;
-  --flat-ink-soft: #34495e;
+  --flat-ink-soft: #516273;
   --flat-surface: #ffffff;
-  --flat-muted: #ecf0f1;
-  --flat-line: #bdc3c7;
+  --flat-muted: #f3f6f8;
+  --flat-line: #d5dde5;
   --vp-c-brand-1: var(--flat-blue);
   --vp-c-brand-2: var(--flat-blue-dark);
   --vp-c-brand-3: var(--flat-blue-dark);
@@ -95,7 +95,12 @@ body,
 
 .VPNavBar {
   background: #ffffff;
-  border-bottom: 3px solid var(--flat-blue);
+  border-bottom: 1px solid var(--flat-line);
+}
+
+.VPNavBarTitle .title {
+  font-weight: 800;
+  color: var(--flat-ink);
 }
 
 .VPNavBarTitle .title,
@@ -113,9 +118,10 @@ body,
 
 .VPHero .container {
   border: 1px solid var(--flat-line);
+  border-top: 6px solid var(--flat-blue);
   border-radius: 8px;
   background: #ffffff;
-  padding: 28px;
+  padding: 32px;
 }
 
 .VPHero .main {
@@ -123,20 +129,26 @@ body,
 }
 
 .VPHero .name {
-  font-size: clamp(2rem, 4vw, 3.35rem);
-  line-height: 1;
+  font-size: 0.84rem;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--flat-blue-dark);
 }
 
 .VPHero .text {
-  max-width: 14ch;
+  max-width: 11ch;
+  font-size: clamp(2.35rem, 5vw, 4.4rem);
+  line-height: 1.04;
   color: var(--flat-ink);
 }
 
 .VPHero .tagline {
-  max-width: 52rem;
+  max-width: 56rem;
   color: var(--flat-ink-soft);
-  font-size: 1.05rem;
-  line-height: 1.7;
+  font-size: 1.02rem;
+  line-height: 1.75;
 }
 
 .VPHero .actions {
@@ -165,24 +177,46 @@ body,
 .VPLocalNav .menu,
 .VPLocalNav .menu-link {
   border-radius: 8px;
+  border: 1px solid transparent;
+  font-weight: 700;
   transition:
     background-color 0.2s ease,
     border-color 0.2s ease,
     color 0.2s ease;
 }
 
+.VPNavBarMenuLink,
+.VPNavBarMenuGroup .button {
+  min-height: 40px;
+  padding-inline: 14px;
+  color: var(--flat-ink-soft);
+}
+
 .VPNavBarMenuLink:hover,
 .VPNavBarMenuGroup .button:hover,
-.VPNavBarMenuLink.active,
-.VPNavBarMenuGroup.active .button,
 .VPNavScreenMenuLink:hover,
-.VPNavScreenMenuLink.active,
 .VPFlyout .link:hover,
 .VPSidebarItem .link:hover,
-.VPSidebarItem .link.active,
 .VPSidebarItem .item:hover {
   background: var(--flat-muted);
+  border-color: var(--flat-line);
   color: var(--flat-blue-dark);
+}
+
+.VPNavBarMenuLink.active,
+.VPNavBarMenuGroup.active .button,
+.VPNavScreenMenuLink.active {
+  background: var(--flat-blue);
+  border-color: var(--flat-blue-dark);
+  color: #ffffff;
+}
+
+.VPNavBarMenuLink.active:hover,
+.VPNavBarMenuGroup.active .button:hover,
+.VPNavScreenMenuLink.active:hover {
+  background: var(--flat-blue-dark);
+  border-color: var(--flat-blue-dark);
+  color: #ffffff;
 }
 
 .VPFlyout {
@@ -195,11 +229,12 @@ body,
   min-height: 40px;
   border: 1px solid var(--flat-line);
   border-radius: 8px;
-  background: #ffffff;
+  background: var(--flat-muted);
 }
 
 .DocSearch-Button:hover {
-  background: var(--flat-muted);
+  background: #ffffff;
+  border-color: var(--flat-blue);
 }
 
 .DocSearch-Modal,
@@ -426,6 +461,16 @@ body,
   margin-top: 0;
 }
 
+.VPHome .vp-doc a[class] {
+  color: inherit;
+  text-decoration: none;
+}
+
+.VPHome .vp-doc a[class]:hover,
+.VPHome .vp-doc a[class]:focus-visible {
+  color: inherit;
+}
+
 .VPHome .vp-doc h2,
 .VPHome .vp-doc h3,
 .VPHome .vp-doc p {
@@ -452,7 +497,7 @@ body,
 
 @media (max-width: 960px) {
   .VPHero .container {
-    padding: 20px;
+    padding: 24px;
   }
 
   .VPHero .text {
