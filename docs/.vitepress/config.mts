@@ -77,7 +77,15 @@ export default defineConfig({
       label: "本页内容"
     },
     search: {
-      provider: "local"
+      provider: "local",
+      options: {
+        translations: {
+          button: {
+            buttonText: "Ctrl K",
+            buttonAriaLabel: "打开搜索"
+          }
+        }
+      }
     },
     docFooter: {
       prev: "上一页",

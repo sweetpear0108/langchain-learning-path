@@ -23,15 +23,12 @@
         <strong>`python3 main.py`</strong>
       </div>
     </div>
+    <div class="landing-summary">
+      <div class="landing-summary-item">先确认章节对应的目录。</div>
+      <div class="landing-summary-item">再看是否需要安装独立依赖。</div>
+      <div class="landing-summary-item">最后动手改一处再重跑一次。</div>
+    </div>
   </div>
-  <aside class="landing-rail">
-    <p class="landing-rail-label">运行前先看</p>
-    <ul>
-      <li>先确认章节对应的目录。</li>
-      <li>再看是否需要安装独立依赖。</li>
-      <li>最后动手改一处再重跑一次。</li>
-    </ul>
-  </aside>
 </div>
 
 ## 通用运行方式

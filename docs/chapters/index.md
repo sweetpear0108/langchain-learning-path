@@ -23,15 +23,12 @@
         <strong>按章节顺序推进</strong>
       </div>
     </div>
+    <div class="landing-summary">
+      <div class="landing-summary-item">先看全部章节的能力分层。</div>
+      <div class="landing-summary-item">再按章节定位当前阅读位置。</div>
+      <div class="landing-summary-item">最后回到主项目页理解版本演进。</div>
+    </div>
   </div>
-  <aside class="landing-rail">
-    <p class="landing-rail-label">本页用途</p>
-    <ul>
-      <li>先看全部章节的能力分层。</li>
-      <li>再按章节定位当前阅读位置。</li>
-      <li>最后回到主项目页理解版本演进。</li>
-    </ul>
-  </aside>
 </div>
 
 ## 章节总览
@@ -107,35 +104,29 @@
   </section>
 </div>
 
-## 统一章节结构
+## 怎么读章节
 
-<div class="landing-stack">
-  <div class="landing-step">
-    <span class="landing-step-index">01</span>
-    <div>
-      <h3>章节定位</h3>
-      <p>先说这一章解决什么问题，再说为什么它在主线上重要。</p>
-    </div>
+<div class="landing-mini-grid">
+  <div class="landing-mini-card">
+    <span class="landing-mini-index">01</span>
+    <h3>先看定位</h3>
+    <p>先判断这一章解决什么问题，以及它在主线里的位置。</p>
   </div>
-  <div class="landing-step">
-    <span class="landing-step-index">02</span>
-    <div>
-      <h3>最小示例</h3>
-      <p>先给能跑的版本，再逐步加概念和约束。</p>
-    </div>
+  <div class="landing-mini-card">
+    <span class="landing-mini-index">02</span>
+    <h3>再跑示例</h3>
+    <p>先跑最小版本，再回到正文理解概念、约束和边界。</p>
   </div>
-  <div class="landing-step">
-    <span class="landing-step-index">03</span>
-    <div>
-      <h3>实践与验收</h3>
-      <p>每章都要有可检查的结果，方便回看与复盘。</p>
-    </div>
+  <div class="landing-mini-card">
+    <span class="landing-mini-index">03</span>
+    <h3>最后验收</h3>
+    <p>每章都应该留下一个能检查的结果，方便复盘和继续往后接。</p>
   </div>
 </div>
 
-## 阅读入口
+## 快速跳转
 
-<div class="landing-chip-list">
+<div class="landing-chip-list landing-chip-list-compact">
   <a href="./chapter-01-llm-basics">第 1 章</a>
   <a href="./chapter-03-first-chain">第 3 章</a>
   <a href="./chapter-05-rag-basics">第 5 章</a>
@@ -143,6 +134,6 @@
   <a href="./chapter-10-capstone-and-deployment">第 10 章</a>
 </div>
 
-<p class="landing-note">
+<p class="landing-inline-note">
   移动端阅读时，建议先点开当前章节，再回到本页判断自己处于哪一层能力阶段。章节越往后，越要把前一章的输出当作当前章的输入。
 </p>

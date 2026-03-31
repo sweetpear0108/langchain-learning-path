@@ -23,15 +23,12 @@
         <strong>先版本，后能力</strong>
       </div>
     </div>
+    <div class="landing-summary">
+      <div class="landing-summary-item">为什么所有章节都围绕一个助手展开。</div>
+      <div class="landing-summary-item">每一版能力是怎么递进的。</div>
+      <div class="landing-summary-item">读完以后，项目会变成什么样。</div>
+    </div>
   </div>
-  <aside class="landing-rail">
-    <p class="landing-rail-label">这页回答什么</p>
-    <ul>
-      <li>为什么所有章节都围绕一个助手展开。</li>
-      <li>每一版能力是怎么递进的。</li>
-      <li>读完以后，项目会变成什么样。</li>
-    </ul>
-  </aside>
 </div>
 
 ## 版本演进
