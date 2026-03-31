@@ -6,13 +6,13 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
 
-from pydantic import Field
 from langchain_core.documents import Document
 from langchain_core.language_models import FakeListChatModel
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.retrievers import BaseRetriever
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+from pydantic import Field
 
 
 @dataclass(frozen=True)
@@ -73,7 +73,9 @@ class KeywordRetriever(BaseRetriever):
     top_k: int = 3
 
     def _get_relevant_documents(self, query: str) -> list[Document]:
-        ranked = [RetrievedChunk(document=chunk, score=score(query, chunk)) for chunk in self.documents]
+        ranked = [
+            RetrievedChunk(document=chunk, score=score(query, chunk)) for chunk in self.documents
+        ]
         ranked.sort(key=lambda item: (item.score, len(item.document.page_content)), reverse=True)
         return [item.document for item in ranked[: self.top_k] if item.score > 0]
 
@@ -122,7 +124,10 @@ def answer_with_framework(question: str, context: str, mode: str) -> str:
     )
     model = FakeListChatModel(
         responses=[
-            f"[{mode}] 更接近真实 RAG 接口的版本会先取 retriever 结果，再做重排和上下文压缩，最后把证据送给模型回答。"
+            (
+                f"[{mode}] 更接近真实 RAG 接口的版本会先取 retriever 结果，"
+                "再做重排和上下文压缩，最后把证据送给模型回答。"
+            )
         ]
     )
     chain = prompt | model | StrOutputParser()
@@ -181,7 +186,14 @@ def main() -> None:
     question = "第 6 章为什么强调不要只调模型？"
     run_experiment(question, chunk_size=50, chunk_overlap=0, top_k=2, mode="baseline")
     run_experiment(question, chunk_size=100, chunk_overlap=20, top_k=3, mode="optimized")
-    run_real_strategy(question, chunk_size=60, chunk_overlap=0, top_k=2, mode="framework-baseline", rewrite=False)
+    run_real_strategy(
+        question,
+        chunk_size=60,
+        chunk_overlap=0,
+        top_k=2,
+        mode="framework-baseline",
+        rewrite=False,
+    )
     run_real_strategy(
         question,
         chunk_size=120,

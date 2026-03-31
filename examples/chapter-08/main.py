@@ -133,7 +133,12 @@ class WorkflowState(TypedDict):
 
 
 def real_classify(state: WorkflowState) -> WorkflowState:
-    route = "outline" if "第 7 章" in state["question"] else "clarify" if "快速" in state["question"] else "rag"
+    if "第 7 章" in state["question"]:
+        route = "outline"
+    elif "快速" in state["question"]:
+        route = "clarify"
+    else:
+        route = "rag"
     return {"route": route, "trace": f"{state['trace']} -> classify"}
 
 

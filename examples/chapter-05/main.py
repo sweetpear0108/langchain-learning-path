@@ -6,8 +6,6 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
 
-from pydantic import Field
-
 from langchain_core.documents import Document
 from langchain_core.language_models import FakeListChatModel
 from langchain_core.output_parsers import StrOutputParser
@@ -15,6 +13,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.retrievers import BaseRetriever
 from langchain_core.runnables import RunnableLambda, RunnablePassthrough
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+from pydantic import Field
 
 
 @dataclass(frozen=True)
@@ -124,9 +123,7 @@ def build_real_rag_chain(chunks: list[Document]):
         ]
     )
     model = FakeListChatModel(
-        responses=[
-            "RAG 更适合课程资料问答，因为链路会先检索课程内容，再依据命中的片段组织答案。"
-        ]
+        responses=["RAG 更适合课程资料问答，因为链路会先检索课程内容，再依据命中的片段组织答案。"]
     )
     chain = (
         {

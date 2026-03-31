@@ -4,11 +4,11 @@ import json
 import re
 from dataclasses import dataclass
 
-from pydantic import BaseModel, Field
 from langchain_core.language_models import FakeListChatModel
 from langchain_core.output_parsers import JsonOutputParser, StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate, PromptTemplate
 from langchain_core.runnables import RunnableLambda
+from pydantic import BaseModel, Field
 
 
 @dataclass

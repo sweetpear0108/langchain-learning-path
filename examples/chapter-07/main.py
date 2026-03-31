@@ -154,13 +154,16 @@ def summarize_tool_messages(question: str, tool_messages: list[ToolMessage]) -> 
     if not tool_messages:
         return "没有触发工具。建议把问题缩小到章节查询、摘要读取或练习生成。"
     evidence = "\n".join(f"- {message.name}: {message.content}" for message in tool_messages)
-    return f"问题：{question}\n工具证据：\n{evidence}\n最终答复：先看课程结构，再结合章节摘要安排练习。"
+    return (
+        f"问题：{question}\n工具证据：\n{evidence}\n"
+        "最终答复：先看课程结构，再结合章节摘要安排练习。"
+    )
 
 
 def demo_tools() -> None:
     print("== Tool 演示 ==")
-    for tool in TOOLS:
-        print(f"- {tool.name}: {tool.description}")
+    for registered_tool in TOOLS:
+        print(f"- {registered_tool.name}: {registered_tool.description}")
     print()
     print(search_outline("7"))
     print(get_chapter_summary("7"))
