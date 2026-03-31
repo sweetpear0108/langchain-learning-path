@@ -84,7 +84,7 @@
 - [学习计划](./docs/guide/study-plan.md)
 - [完整设计方案](./docs/DESIGN.md)
 - [完整课程大纲](./docs/COURSE_OUTLINE.md)
-- [章节目录](./docs/chapters/README.md)
+- [章节目录](./docs/chapters/index.md)
 - [术语表](./docs/faq/glossary.md)
 - [常见问题排查](./docs/faq/troubleshooting.md)
 

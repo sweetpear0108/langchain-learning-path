@@ -80,7 +80,7 @@ python main.py
 
 如果章节示例需要模型 API Key，会在该章节目录下提供 `.env.example`，并在 `README.md` 写清楚变量名和用途。
 
-所有章节目录和运行入口可以在 [示例代码总览](../examples/README.md) 里直接查看。
+所有章节目录和运行入口可以在 [示例代码总览](../examples/) 里直接查看。
 
 ## 每章应该怎么学
 
